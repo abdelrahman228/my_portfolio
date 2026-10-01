@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdulrahman Mohammed Eid - Curriculum Vitae</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #0284c7;
+      --text: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+    .cv-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+    .cv-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+    .cv-name {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+    .cv-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0.35rem 0 0.85rem;
+    }
+    .cv-contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .cv-contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .cv-contact-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .cv-contact-item a:hover {
+      color: var(--accent);
+    }
+    .cv-section {
+      margin-bottom: 1.75rem;
+    }
+    .cv-section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.85rem;
+    }
+    .cv-item {
+      margin-bottom: 1.2rem;
+    }
+    .cv-item:last-child {
+      margin-bottom: 0;
+    }
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.2rem;
+    }
+    .cv-item-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .cv-item-date {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .cv-item-sub {
+      font-size: 0.92rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .cv-item-desc {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .cv-bullets {
+      padding-left: 1.25rem;
+      margin-top: 0.4rem;
+    }
+    .cv-bullets li {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+      line-height: 1.5;
+    }
+    .cv-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem;
+      font-size: 0.9rem;
+    }
+    .cv-skill-category strong {
+      color: var(--primary);
+    }
+    .action-bar {
+      max-width: 850px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #0f172a;
+      color: #fff;
+      padding: 0.65rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      font-size: 0.9rem;
+    }
+    .btn-print:hover { background: #1e293b; }
+    .btn-back {
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .btn-back:hover { color: #0f172a; }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .cv-container { box-shadow: none; border: none; padding: 0; width: 100%; max-width: 100%; }
+      .action-bar { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="action-bar">
+    <a href="../../index.html" class="btn-back">← Back to Portfolio</a>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <main class="cv-container">
+    <header class="cv-header">
+      <h1 class="cv-name">Abdulrahman Mohammed Eid</h1>
+      <div class="cv-title">Backend Software Engineer | Node.js · TypeScript · NestJS</div>
+      <div class="cv-contact-strip">
+        <span class="cv-contact-item">📍 Hadayek October, Giza, Egypt</span>
+        <span class="cv-contact-item">📞 <a href="tel:01063887051">01063887051</a></span>
+        <span class="cv-contact-item">✉️ <a href="mailto:abdelrahman782eid@gmail.com">abdelrahman782eid@gmail.com</a></span>
+        <span class="cv-contact-item">🔗 <a href="https://github.com/abdelrahman228" target="_blank">github.com/abdelrahman228</a></span>
+        <span class="cv-contact-item">💼 <a href="https://linkedin.com/in/abdulrahman-mohammed-6015b620b" target="_blank">LinkedIn</a></span>
+      </div>
+    </header>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Professional Summary</h2>
+      <p class="cv-item-desc">
+        Backend Developer with hands-on experience building scalable RESTful and GraphQL APIs using Node.js, TypeScript, Express.js, and NestJS. Skilled in MongoDB, JWT authentication, Two-Factor Verification (2FA), Redis caching, and role-based access control (RBAC). Dedicated to clean modular architecture, rigorous DTO validation, and high system reliability. Seeking a junior or internship role to contribute to scalable, well-structured backend systems.
+      </p>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Education & Honors</h2>
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">Bachelor's Degree in Business Information Systems (BIS)</div>
+          <div class="cv-item-date">Graduating Class of 2026</div>
+        </div>
+        <div class="cv-item-sub">El Motatawera Higher Institute, Haram – Giza</div>
+        <p class="cv-item-desc">Focus on database design, enterprise software architecture, system analysis, and relational data modeling.</p>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">Route Academy Backend Node.js Diploma</div>
+          <div class="cv-item-date" style="color: #059669; font-weight: 700;">Top Achiever Award</div>
+        </div>
+        <div class="cv-item-sub">Route Academy</div>
+        <p class="cv-item-desc">Comprehensive professional diploma covering enterprise Node.js APIs, asynchronous patterns, MVC/Repository design patterns, authentication, and database scalability.</p>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Professional Experience</h2>
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">Instructor</div>
+          <div class="cv-item-date">Aug 2026 – Present</div>
+        </div>
+        <div class="cv-item-sub">Afaq Academy for Artificial Intelligence · Giza, Egypt</div>
+        <ul class="cv-bullets">
+          <li>Deliver beginner-friendly lessons on artificial intelligence concepts, modern developer tools, and backend fundamentals for learners.</li>
+          <li>Prepare structured educational content and programming exercises to simplify technical topics for students.</li>
+          <li>Mentor learners on coding best practices, debugging workflows, and logical problem solving.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2 class="cv-section-title">Featured Backend Projects</h2>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">E-Commerce Backend (Product Management System)</div>
+          <div class="cv-item-date">NestJS · TypeScript · MongoDB</div>
+        </div>
+        <div class="cv-item-sub">Tech: NestJS, TypeScript, MongoDB, Cloudinary, JWT, class-validator</div>
+        <ul class="cv-bullets">
+          <li>Architected RESTful CRUD APIs following NestJS modular Dependency Injection and service provider patterns.</li>
+          <li>Implemented role-based authentication (Admin/User) utilizing custom Execution Context Guards and Decorators.</li>
+          <li>Enforced request payload validation with Data Transfer Objects (DTOs) and class-validator.</li>
+          <li>Integrated Cloudinary media pipeline for automated product image upload and transformation.</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">Social Media Backend Engine</div>
+          <div class="cv-item-date">GraphQL · Node.js · TypeScript</div>
+        </div>
+        <div class="cv-item-sub">Tech: Node.js, TypeScript, MongoDB, GraphQL, Custom Repository Pattern</div>
+        <ul class="cv-bullets">
+          <li>Engineered GraphQL API schema with queries, mutations, and field resolvers for posts, threads, and dynamic reactions.</li>
+          <li>Developed a Custom Repository Pattern to decouple database queries from business rules.</li>
+          <li>Implemented an ephemeral Story module leveraging MongoDB TTL-based expiry indexing for automated document cleanup.</li>
+          <li>Designed nested comment CRUD with cascading tree deletion across linked database entities.</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">Wshwshny (Anonymous Messaging Backend)</div>
+          <div class="cv-item-date">Redis · AWS · 2FA Security</div>
+        </div>
+        <div class="cv-item-sub">Tech: Node.js, MongoDB, Redis, AWS, JWT, 2FA Verification</div>
+        <ul class="cv-bullets">
+          <li>Built secure JWT authentication pipeline with Two-Factor Verification (2FA) for sensitive account actions.</li>
+          <li>Integrated Redis in-memory caching and rate-limiting to significantly reduce database query load and boost API throughput.</li>
+          <li>Engineered architecture deployed on AWS infrastructure ensuring high availability and message anonymity guarantees.</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">Black Horse Car Garage (Graduation Project)</div>
+          <div class="cv-item-date">ASP.NET Web Forms · SQL Server</div>
+        </div>
+        <div class="cv-item-sub">Tech: ASP.NET Web Forms, C#, SQL Server, Database Design (ERD)</div>
+        <ul class="cv-bullets">
+          <li>Designed normalized relational database schema (ERD) with primary/foreign keys, stored procedures, and indexes in SQL Server.</li>
+          <li>Implemented complete car maintenance center management workflows including client registration, service booking, parts tracking, and billing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section" style="margin-bottom: 0;">
+      <h2 class="cv-section-title">Technical Skills Matrix</h2>
+      <div class="cv-skills-grid">
+        <div class="cv-skill-category">
+          <strong>Languages:</strong> JavaScript, TypeScript, SQL (T-SQL)
+        </div>
+        <div class="cv-skill-category">
+          <strong>Backend:</strong> Node.js, Express.js, NestJS, RESTful APIs, GraphQL, MVC Architecture, OOP, Repository Pattern, Modular Architecture
+        </div>
+        <div class="cv-skill-category">
+          <strong>Databases:</strong> MongoDB, Mongoose (ODM), SQL Server (MSSQL), Database Design (ERD Modeling)
+        </div>
+        <div class="cv-skill-category">
+          <strong>Authentication & Security:</strong> JWT, Two-Factor Verification (2FA), Role-Based Access Control (RBAC), Guards & Decorators, DTO Validation (class-validator)
+        </div>
+        <div class="cv-skill-category" style="grid-column: span 2;">
+          <strong>Tools & Cloud:</strong> Git, GitHub, Postman, Redis, AWS, Cloudinary
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

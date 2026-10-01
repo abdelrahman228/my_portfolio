@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Abdulrahman Mohammed Eid - Backend Software Engineer specializing in Node.js, TypeScript, NestJS, GraphQL, MongoDB, Redis, and scalable system architectures.">
+  <meta name="keywords" content="Abdulrahman Mohammed Eid, Backend Engineer, Node.js, NestJS, TypeScript, MongoDB, Redis, Software Engineer, Portfolio, Egypt">
+  <meta name="author" content="Abdulrahman Mohammed Eid">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080b10">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Abdulrahman Mohammed Eid | Backend Software Engineer">
+  <meta property="og:description" content="Node.js · TypeScript · NestJS · Scalable, secure, and high-performance backend systems.">
+  <meta property="og:type" content="website">
+
+  <title>Abdulrahman Mohammed Eid | Backend Software Engineer</title>
+
+  <!-- Typography: Inter and JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top System Status Ticker -->
+  <div class="system-status-bar" role="region" aria-label="System Status">
+    <div class="system-status-left">
+      <span class="status-indicator">
+        <span class="status-dot"></span>
+        <span>SYSTEM OPERATIONAL</span>
+      </span>
+      <span class="status-metric">NODE: <span class="val">v20.18.0</span></span>
+      <span class="status-metric">NESTJS: <span class="val">v10.4</span></span>
+      <span class="status-metric">REDIS CACHE: <span class="val">ACTIVE</span></span>
+    </div>
+    <div class="system-status-right">
+      <span class="status-metric">LATENCY: <span id="live-latency" class="val">14ms</span></span>
+      <span class="status-metric">REGION: <span class="val">ME-CENTRAL (GIZA)</span></span>
+      <span class="status-metric">ENV: <span class="val">PRODUCTION</span></span>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#hero" class="brand-logo" aria-label="Homepage">
+        <span class="brand-prompt">eid@backend:~$</span>
+        <span class="brand-cursor"></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#about" class="nav-link"><span class="nav-num">01.</span>//about</a>
+        <a href="#skills" class="nav-link"><span class="nav-num">02.</span>//skills</a>
+        <a href="#experience" class="nav-link"><span class="nav-num">03.</span>//experience</a>
+        <a href="#projects" class="nav-link"><span class="nav-num">04.</span>//projects</a>
+        <a href="#contact" class="nav-link"><span class="nav-num">05.</span>//contact</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <button class="nav-cta" id="cmd-palette-btn" style="background: rgba(255,255,255,0.04); border-color: var(--border-subtle); color: var(--text-muted); padding: 0.45rem 0.75rem;" aria-label="Open Command Palette" title="Command Palette (Ctrl+K)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.08); padding: 0.1rem 0.35rem; border-radius: 4px;">⌘K</span>
+        </button>
+
+        <button class="nav-cta open-cv-btn" id="header-cv-btn" aria-label="View Curriculum Vitae">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>View CV</span>
+        </button>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#about" class="nav-link">// 01. About</a>
+      <a href="#skills" class="nav-link">// 02. Skills</a>
+      <a href="#experience" class="nav-link">// 03. Experience</a>
+      <a href="#projects" class="nav-link">// 04. Projects</a>
+      <a href="#contact" class="nav-link">// 05. Contact</a>
+      <button class="btn btn-primary open-cv-btn" style="width: 100%;">View / Download CV</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Left Info -->
+        <div class="hero-content">
+          <div class="hero-intro-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            <span>AVAILABLE FOR JUNIOR & INTERNSHIP ROLES</span>
+          </div>
+
+          <h1 class="hero-name">Abdulrahman Mohammed Eid</h1>
+
+          <div class="hero-title-tag">
+            <span>Backend Software Engineer</span>
+            <span class="divider">|</span>
+            <span class="techs">Node.js · TypeScript · NestJS</span>
+          </div>
+
+          <p class="hero-subtitle">
+            Seeking a junior or internship role to contribute to scalable, well-structured backend systems. Dedicated to architecting robust RESTful & GraphQL APIs, microservices, and reliable database solutions.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary open-cv-btn" id="hero-cv-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download CV</span>
+            </button>
+
+            <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://linkedin.com/in/abdulrahman-mohammed-6015b620b" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-strip">
+            <div class="stat-item">
+              <div class="stat-val">Route <span>Top</span></div>
+              <div class="stat-lbl">Achiever Award</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-val">4<span>+</span></div>
+              <div class="stat-lbl">Enterprise Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-val">BIS<span>'26</span></div>
+              <div class="stat-lbl">Graduating Degree</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right: Interactive Backend Terminal -->
+        <div class="hero-terminal-card" role="region" aria-label="Interactive Terminal Simulation">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              <span>zsh — bash-session-abdelrahman</span>
+            </div>
+            <div class="terminal-actions-bar">
+              <button class="term-action-btn" id="term-clear-btn">clear</button>
+            </div>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-line output-info">// Initializing Backend Developer Environment...</div>
+            <div class="terminal-line output-success">✓ Loaded Node.js v20.18.0 & NestJS CLI</div>
+            <div class="terminal-line output-cyan">✓ Connected to MongoDB Replica Set & Redis 7.2</div>
+            <div class="terminal-line">Type <span class="output-success">'help'</span> to see commands or click quick actions below.</div>
+            
+            <div class="terminal-interactive-row">
+              <span class="terminal-prompt">eid@server:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type 'help', 'bio', 'projects'..." aria-label="Terminal command input">
+            </div>
+          </div>
+
+          <div class="terminal-quick-cmds">
+            <span class="quick-cmd-label">Quick Run:</span>
+            <button class="quick-cmd-btn" data-cmd="bio">bio</button>
+            <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+            <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+            <button class="quick-cmd-btn" data-cmd="curl /api/v1/bio">curl bio</button>
+            <button class="quick-cmd-btn" data-cmd="status">status</button>
+            <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION
+         ========================================================================== -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">// 01. Profile Summary</div>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-desc">Building resilient, testable, and high-performance server-side architectures with modern TypeScript and enterprise patterns.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Professional Avatar & Meta -->
+          <div class="about-avatar-card">
+            <div class="avatar-wrapper">
+              <img src="assets/images/avatar.jpg" alt="Abdulrahman Mohammed Eid - Backend Engineer" class="avatar-img" width="400" height="400" loading="lazy">
+              <div class="avatar-badge-overlay">
+                <span class="status-dot"></span>
+                <span>Open for Junior / Internship Roles</span>
+              </div>
+            </div>
+            <div class="about-avatar-meta">
+              <h3 class="about-avatar-name">Abdulrahman Mohammed Eid</h3>
+              <p class="about-avatar-role">Backend Software Engineer</p>
+              <p style="font-size: 0.8rem; color: var(--text-dim); font-family: var(--font-mono);">Hadayek October, Giza, Egypt</p>
+            </div>
+          </div>
+
+          <!-- Right: Summary, Highlights, Education -->
+          <div class="about-content">
+            <p class="about-summary-text">
+              Backend Developer with hands-on experience building <strong>RESTful and GraphQL APIs</strong> using <strong>Node.js, TypeScript, Express.js, and NestJS</strong>. Skilled in <strong>MongoDB, JWT authentication, 2FA verification, Redis caching</strong>, and <strong>role-based access control (RBAC)</strong>. Focused on writing clean, modular code following the Repository Pattern and MVC principles.
+            </p>
+
+            <!-- Route Academy Achievement Highlight -->
+            <div class="highlight-box">
+              <div class="highlight-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              </div>
+              <div class="highlight-content">
+                <h4>Route Academy Backend Node.js — Top Achiever</h4>
+                <p>Completed the Route Academy intensive Backend Node.js engineering diploma with Top Achiever honors, mastering advanced API architecture, asynchronous concurrency, authentication security, and database modeling.</p>
+              </div>
+            </div>
+
+            <!-- Education Card -->
+            <div class="education-card">
+              <div class="edu-icon-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <div class="edu-info">
+                <h4>Bachelor's Degree in Business Information Systems (BIS)</h4>
+                <div class="edu-institution">El Motatawera Higher Institute, Haram – Giza</div>
+                <div class="edu-date">Class of 2026 · Information Systems & Database Specialization</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem;">Curriculum emphasis on relational & non-relational database design, systems analysis, object-oriented software engineering, and enterprise workflows.</p>
+              </div>
+            </div>
+
+            <!-- Engineering Architecture Pillars -->
+            <div class="backend-pillars-grid">
+              <div class="pillar-item">
+                <h5>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  Clean & Modular Architecture
+                </h5>
+                <p>MVC design, NestJS Dependency Injection, Repository Pattern, and modular decoupling for long-term maintainability.</p>
+              </div>
+
+              <div class="pillar-item">
+                <h5>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  Ironclad Auth & RBAC
+                </h5>
+                <p>JWT lifecycle management, Two-Factor Authentication (2FA), Execution Context Guards, and DTO validation.</p>
+              </div>
+
+              <div class="pillar-item">
+                <h5>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  High-Throughput Caching
+                </h5>
+                <p>Sub-millisecond latency caching via Redis, TTL indexing, rate-limiting, and MongoDB query optimization.</p>
+              </div>
+
+              <div class="pillar-item">
+                <h5>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                  Scalable Database Modeling
+                </h5>
+                <p>MongoDB ODM schemas, normalized SQL Server ERDs, foreign keys, stored procedures, and cascading deletions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS SECTION
+         ========================================================================== -->
+    <section id="skills" style="background: rgba(13, 18, 29, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">// 02. Technical Arsenal</div>
+          <h2 class="section-title">Backend Skills & Competencies</h2>
+          <p class="section-desc">Categorized breakdown of programming languages, frameworks, persistence layers, authentication protocols, and cloud toolsets.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter-nav" role="tablist">
+          <button class="skill-tab-btn active" data-filter="all">All Skills</button>
+          <button class="skill-tab-btn" data-filter="languages">Languages</button>
+          <button class="skill-tab-btn" data-filter="backend">Backend & Architecture</button>
+          <button class="skill-tab-btn" data-filter="databases">Databases & ODM</button>
+          <button class="skill-tab-btn" data-filter="security">Auth & Security</button>
+          <button class="skill-tab-btn" data-filter="tools">Tools & Cloud</button>
+        </div>
+
+        <div class="skills-categories-grid">
+          <!-- Category 1: Languages -->
+          <div class="skill-category-card" data-category="languages">
+            <div class="skill-category-header">
+              <div class="skill-cat-title">
+                <span class="skill-cat-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </span>
+                <span>Languages</span>
+              </div>
+              <span class="skill-cat-count">3 Skills</span>
+            </div>
+            <div class="skill-tags-wrapper">
+              <span class="skill-tag featured">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                TypeScript
+              </span>
+              <span class="skill-tag featured">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                JavaScript (ES6+)
+              </span>
+              <span class="skill-tag">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                SQL (T-SQL)
+              </span>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & Architecture -->
+          <div class="skill-category-card" data-category="backend">
+            <div class="skill-category-header">
+              <div class="skill-cat-title">
+                <span class="skill-cat-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                </span>
+                <span>Backend Frameworks & Patterns</span>
+              </div>
+              <span class="skill-cat-count">9 Skills</span>
+            </div>
+            <div class="skill-tags-wrapper">
+              <span class="skill-tag featured">Node.js</span>
+              <span class="skill-tag featured">NestJS</span>
+              <span class="skill-tag featured">Express.js</span>
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag featured">GraphQL</span>
+              <span class="skill-tag">MVC Architecture</span>
+              <span class="skill-tag">Object-Oriented Programming (OOP)</span>
+              <span class="skill-tag">Repository Pattern</span>
+              <span class="skill-tag">Modular Architecture</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Databases -->
+          <div class="skill-category-card" data-category="databases">
+            <div class="skill-category-header">
+              <div class="skill-cat-title">
+                <span class="skill-cat-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                </span>
+                <span>Databases & Persistence</span>
+              </div>
+              <span class="skill-cat-count">4 Skills</span>
+            </div>
+            <div class="skill-tags-wrapper">
+              <span class="skill-tag featured">MongoDB</span>
+              <span class="skill-tag featured">Mongoose (ODM)</span>
+              <span class="skill-tag">SQL Server (MSSQL)</span>
+              <span class="skill-tag">Database Design (ERD Modeling)</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Authentication & Security -->
+          <div class="skill-category-card" data-category="security">
+            <div class="skill-category-header">
+              <div class="skill-cat-title">
+                <span class="skill-cat-icon" style="color: var(--accent-rose);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </span>
+                <span>Authentication & Security</span>
+              </div>
+              <span class="skill-cat-count">5 Skills</span>
+            </div>
+            <div class="skill-tags-wrapper">
+              <span class="skill-tag security">JSON Web Tokens (JWT)</span>
+              <span class="skill-tag security">Two-Factor Verification (2FA)</span>
+              <span class="skill-tag security">Role-Based Access Control (RBAC)</span>
+              <span class="skill-tag security">Guards & Decorators</span>
+              <span class="skill-tag security">DTO Validation (class-validator)</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Tools & Cloud -->
+          <div class="skill-category-card" data-category="tools">
+            <div class="skill-category-header">
+              <div class="skill-cat-title">
+                <span class="skill-cat-icon" style="color: var(--accent-amber);">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </span>
+                <span>Tools, Cloud & Caching</span>
+              </div>
+              <span class="skill-cat-count">6 Skills</span>
+            </div>
+            <div class="skill-tags-wrapper">
+              <span class="skill-tag featured">Redis (In-Memory Cache)</span>
+              <span class="skill-tag">AWS Cloud</span>
+              <span class="skill-tag">Cloudinary CDN</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Postman (API Testing)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXPERIENCE SECTION
+         ========================================================================== -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">// 03. Professional History</div>
+          <h2 class="section-title">Experience & Mentorship</h2>
+          <p class="section-desc">Practical engineering experience conveying complex software architectures and AI foundations to aspiring tech talents.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta-row">
+                <h3 class="timeline-role">Instructor</h3>
+                <span class="timeline-badge">Active Position</span>
+              </div>
+              <div class="timeline-org">Afaq Academy for Artificial Intelligence</div>
+              <div class="timeline-period">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>Aug 2026 – Present · Giza, Egypt</span>
+              </div>
+
+              <div class="timeline-bullets">
+                <div class="timeline-bullet-item">
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  <span>Deliver beginner-friendly lessons on artificial intelligence concepts, modern developer tools, and data processing workflows for learners.</span>
+                </div>
+                <div class="timeline-bullet-item">
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  <span>Prepare structured educational modules and interactive technical exercises to simplify complex computational and algorithmic topics.</span>
+                </div>
+                <div class="timeline-bullet-item">
+                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  <span>Foster problem-solving and clean coding discipline among students transitioning into software engineering tracks.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROJECTS SECTION
+         ========================================================================== -->
+    <section id="projects" style="background: rgba(13, 18, 29, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">// 04. System Implementations</div>
+          <h2 class="section-title">Featured Backend Projects</h2>
+          <p class="section-desc">Production-grade APIs demonstrating modular design, GraphQL schemas, database indexing, Redis caching, and rigorous authentication.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: E-Commerce Backend -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="endpoint-method post">POST</span>
+              <span class="endpoint-path">/api/v1/products (NestJS)</span>
+              <span class="project-category-tag">REST & Modular</span>
+            </div>
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-ecommerce.jpg" alt="E-Commerce Backend Architecture Diagram" class="project-img" width="600" height="338" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="project-category-tag">NestJS · TypeScript · MongoDB · JWT</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">E-Commerce Backend (Product Management System)</h3>
+              <p class="project-desc">
+                High-performance e-commerce catalog API built with NestJS and TypeScript. Features RESTful CRUD endpoints, custom Admin/User execution guards, and cloud media pipelines.
+              </p>
+
+              <div class="project-highlights-box">
+                <div class="highlight-title">Architectural Highlights:</div>
+                <div class="highlight-desc">Role-based authentication (Admin/User) using NestJS Guards and Decorators with comprehensive DTO validation via class-validator and Cloudinary storage integration.</div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-pill">NestJS</span>
+                <span class="project-pill">TypeScript</span>
+                <span class="project-pill">MongoDB</span>
+                <span class="project-pill">Cloudinary</span>
+                <span class="project-pill">JWT</span>
+                <span class="project-pill">Guards/Decorators</span>
+                <span class="project-pill">class-validator</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Repository</span>
+                </a>
+                <button class="inspect-btn" data-project="ecommerce" aria-label="Inspect E-Commerce Architecture">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect Spec</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Social Media Backend -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="endpoint-method graphql">GQL</span>
+              <span class="endpoint-path">/graphql (Schema Resolvers)</span>
+              <span class="project-category-tag">GraphQL & TTL</span>
+            </div>
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-social.jpg" alt="Social Media Backend GraphQL Architecture" class="project-img" width="600" height="338" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="project-category-tag">Node.js · TypeScript · MongoDB · GraphQL</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Social Media Backend Engine</h3>
+              <p class="project-desc">
+                Scalable social platform engine handling GraphQL queries and mutations for posts, dynamic reactions, and temporal stories.
+              </p>
+
+              <div class="project-highlights-box">
+                <div class="highlight-title">Architectural Highlights:</div>
+                <div class="highlight-desc">Custom generic Repository Pattern, Story module with automated MongoDB TTL-based expiry indexing, and nested comment CRUD with cascading tree deletion.</div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-pill">Node.js</span>
+                <span class="project-pill">TypeScript</span>
+                <span class="project-pill">MongoDB</span>
+                <span class="project-pill">GraphQL</span>
+                <span class="project-pill">Repository Pattern</span>
+                <span class="project-pill">TTL Expiry</span>
+                <span class="project-pill">Cascading Delete</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Repository</span>
+                </a>
+                <button class="inspect-btn" data-project="social" aria-label="Inspect Social Media Architecture">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect Spec</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Wshwshny Anonymous Messaging -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="endpoint-method post">POST</span>
+              <span class="endpoint-path">/api/v1/auth/2fa (Redis Cache)</span>
+              <span class="project-category-tag">Redis & Security</span>
+            </div>
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-wshwshny.jpg" alt="Wshwshny Anonymous Messaging Architecture" class="project-img" width="600" height="338" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="project-category-tag">Node.js · MongoDB · Redis · AWS</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Wshwshny (Anonymous Messaging Backend)</h3>
+              <p class="project-desc">
+                High-throughput, privacy-focused anonymous messaging system with two-factor user authentication and in-memory Redis caching.
+              </p>
+
+              <div class="project-highlights-box">
+                <div class="highlight-title">Architectural Highlights:</div>
+                <div class="highlight-desc">Engineered JWT authentication with Two-Factor Verification (2FA), sub-millisecond Redis response caching, and AWS cloud deployment for maximum uptime.</div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-pill">Node.js</span>
+                <span class="project-pill">MongoDB</span>
+                <span class="project-pill">Redis</span>
+                <span class="project-pill">AWS</span>
+                <span class="project-pill">JWT</span>
+                <span class="project-pill">2FA Verification</span>
+                <span class="project-pill">Rate Limiting</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Repository</span>
+                </a>
+                <button class="inspect-btn" data-project="wshwshny" aria-label="Inspect Wshwshny Architecture">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect Spec</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Black Horse Car Garage -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <span class="endpoint-method sql">SQL</span>
+              <span class="endpoint-path">MSSQL Server / ASP.NET</span>
+              <span class="project-category-tag">Relational ERD</span>
+            </div>
+            <div class="project-img-wrapper">
+              <img src="assets/images/project-blackhorse.jpg" alt="Black Horse Car Garage ERD Schema" class="project-img" width="600" height="338" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="project-category-tag">ASP.NET Web Forms · SQL Server · ERD</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Black Horse Car Garage (Graduation Project)</h3>
+              <p class="project-desc">
+                Enterprise car maintenance center management system with comprehensive relational database modeling, work-order scheduling, and parts inventory.
+              </p>
+
+              <div class="project-highlights-box">
+                <div class="highlight-title">Architectural Highlights:</div>
+                <div class="highlight-desc">Designed normalized Entity-Relationship Diagrams (ERD), complex SQL Server foreign key hierarchies, stored procedures, and operational analytics reporting.</div>
+              </div>
+
+              <div class="project-tags">
+                <span class="project-pill">ASP.NET Web Forms</span>
+                <span class="project-pill">SQL Server</span>
+                <span class="project-pill">ERD Modeling</span>
+                <span class="project-pill">Stored Procedures</span>
+                <span class="project-pill">Relational DB</span>
+                <span class="project-pill">C#</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Repository</span>
+                </a>
+                <button class="inspect-btn" data-project="blackhorse" aria-label="Inspect Black Horse Architecture">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect Spec</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">// 05. Connection Gateway</div>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-desc">Actively considering junior backend software engineering roles and internship opportunities. Let's discuss how I can add value to your infrastructure.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details -->
+          <div class="contact-info-panel">
+            <div class="contact-card-box">
+              <div class="contact-info-list">
+                <!-- Location -->
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div>
+                    <div class="contact-info-label">Current Location</div>
+                    <div class="contact-info-value">Hadayek October, Giza, Egypt</div>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div>
+                    <div class="contact-info-label">Direct Phone / WhatsApp</div>
+                    <div class="contact-info-value">
+                      <a href="tel:01063887051" style="color: inherit;">01063887051</a>
+                      <button class="copy-mini-btn copy-btn" data-copy="01063887051" title="Copy phone number" aria-label="Copy phone number">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-info-item">
+                  <div class="contact-info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div>
+                    <div class="contact-info-label">Professional Email</div>
+                    <div class="contact-info-value">
+                      <a href="mailto:abdelrahman782eid@gmail.com" style="color: inherit;">abdelrahman782eid@gmail.com</a>
+                      <button class="copy-mini-btn copy-btn" data-copy="abdelrahman782eid@gmail.com" title="Copy email address" aria-label="Copy email address">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Links -->
+              <div class="social-links-row">
+                <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="social-btn gh">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>github/abdelrahman228</span>
+                </a>
+
+                <a href="https://linkedin.com/in/abdulrahman-mohammed-6015b620b" target="_blank" rel="noopener noreferrer" class="social-btn in">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <span>LinkedIn Profile</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Terminal Style Contact Form -->
+          <div class="contact-form-box">
+            <div class="contact-form-header">
+              <span>POST /api/v1/contact-dispatch</span>
+              <span style="font-size: 0.72rem; color: var(--text-dim);">Accept: application/json</span>
+            </div>
+            <form id="contact-form" class="form-body">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Full Name / Organization *</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Hiring Manager / Tech Recruiter" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email Address *</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. engineering-talent@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject / Role Opportunity</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="e.g. Junior Backend Engineer Opportunity (Node/Nest)">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message Payload *</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Hello Abdulrahman, we are impressed with your backend engineering portfolio and would like to invite you for an interview..." required></textarea>
+              </div>
+
+              <button type="submit" id="form-submit-btn" class="form-submit-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                <span>Send Message (POST)</span>
+              </button>
+
+              <div id="form-status" class="form-status-msg" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="brand-logo" style="font-size: 0.95rem;">
+          <span class="brand-prompt">eid@backend:~$</span>
+          <span>Abdulrahman Mohammed Eid</span>
+        </div>
+        <div class="copy">Designed with high-performance CSS & modern terminal aesthetics. &copy; 2026.</div>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="footer-link">^ Back to top</a>
+        <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://linkedin.com/in/abdulrahman-mohammed-6015b620b" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT ARCHITECTURE INSPECTOR MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          <span id="modal-project-title">Project Architecture Inspector</span>
+        </div>
+        <button class="modal-close-btn" id="project-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-project-img" src="" alt="Architecture Preview" class="modal-img-preview" width="800" height="450">
+        
+        <div style="margin-bottom: 1.25rem;">
+          <span class="section-label" style="margin-bottom: 0.5rem;">Tech Stack</span>
+          <div id="modal-project-stack" style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-cyan);"></div>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--text-main);">Architectural Overview</h4>
+          <p id="modal-project-overview" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;"></p>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.6rem; color: var(--text-main);">Core Engineering Implementations</h4>
+          <ul id="modal-project-highlights" style="display: flex; flex-direction: column; gap: 0.75rem;"></ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--text-main);">Implementation Code Snippet</h4>
+          <pre style="background: #06090e; border: 1px solid var(--border-subtle); padding: 1rem; border-radius: 8px; font-family: var(--font-mono); font-size: 0.8rem; color: #38bdf8; overflow-x: auto;"><code id="modal-project-code"></code></pre>
+        </div>
+
+        <!-- API Mock Runner Sandbox -->
+        <div class="api-sandbox-box">
+          <div class="api-sandbox-header">
+            <span class="api-sandbox-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span id="sandbox-endpoint-label">Endpoint Sandbox</span>
+            </span>
+            <button class="sandbox-run-btn" id="sandbox-run-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Run Test Request</span>
+            </button>
+          </div>
+          <div class="sandbox-res-box" id="sandbox-res-box">
+            <div class="sandbox-res-meta">
+              <span>Status: <strong id="sandbox-res-status" style="color: var(--accent-emerald);">HTTP 200 OK</strong></span>
+              <span>Latency: <strong id="sandbox-res-latency" style="color: var(--accent-cyan);">14ms</strong></span>
+              <span>Server: <span id="sandbox-res-server" style="color: #cbd5e1;">NestJS</span></span>
+            </div>
+            <pre style="margin: 0; background: transparent; padding: 0; font-family: var(--font-mono); font-size: 0.78rem; color: #38bdf8; overflow-x: auto;"><code id="sandbox-res-json"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PRINTABLE CV MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+    <div class="modal-window" style="max-width: 880px;">
+      <div class="modal-header modal-action-bar">
+        <div class="modal-title" id="cv-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          <span>Curriculum Vitae — Abdulrahman Mohammed Eid</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <a href="assets/cv/Abdulrahman_Mohammed_Eid_CV.html" target="_blank" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.85rem; text-decoration: none;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>Open Standalone</span>
+          </a>
+          <button class="btn btn-primary" id="print-cv-btn" style="padding: 0.4rem 0.9rem; font-size: 0.85rem;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="modal-close-btn" id="cv-modal-close" aria-label="Close CV modal">&times;</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="cv-printable-container">
+          <!-- CV Header -->
+          <div class="cv-printable-header">
+            <h1 class="cv-name">Abdulrahman Mohammed Eid</h1>
+            <div class="cv-role">Backend Software Engineer | Node.js · TypeScript · NestJS</div>
+            <div class="cv-contacts-row">
+              <span>📍 Hadayek October, Giza, Egypt</span>
+              <span>📞 01063887051</span>
+              <span>✉️ abdelrahman782eid@gmail.com</span>
+              <span>🔗 github.com/abdelrahman228</span>
+              <span>💼 linkedin.com/in/abdulrahman-mohammed-6015b620b</span>
+            </div>
+          </div>
+
+          <!-- Professional Summary -->
+          <div class="cv-section">
+            <h2 class="cv-sec-title">Professional Summary</h2>
+            <p class="cv-item-desc">
+              Backend Developer with hands-on experience building scalable RESTful and GraphQL APIs using Node.js, TypeScript, Express.js, and NestJS. Skilled in MongoDB, JWT authentication, Two-Factor Verification (2FA), Redis caching, and role-based access control (RBAC). Committed to clean modular architecture, rigorous DTO validation, and high system reliability. Seeking a junior or internship role to contribute to scalable, well-structured backend systems.
+            </p>
+          </div>
+
+          <!-- Education & Honors -->
+          <div class="cv-section">
+            <h2 class="cv-sec-title">Education & Honors</h2>
+            <div style="margin-bottom: 0.75rem;">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="cv-item-title">Bachelor of Business Information Systems (BIS)</span>
+                <span class="cv-item-sub">Expected Graduation: 2026</span>
+              </div>
+              <div class="cv-item-sub">El Motatawera Higher Institute, Haram – Giza</div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between;">
+                <span class="cv-item-title">Route Academy Backend Node.js Diploma</span>
+                <span class="cv-item-sub" style="color: #059669; font-weight: 600;">Top Achiever</span>
+              </div>
+              <div class="cv-item-sub">Comprehensive professional specialization in advanced backend architecture, REST API design, security, and databases.</div>
+            </div>
+          </div>
+
+          <!-- Professional Experience -->
+          <div class="cv-section">
+            <h2 class="cv-sec-title">Professional Experience</h2>
+            <div>
+              <div style="display: flex; justify-content: space-between;">
+                <span class="cv-item-title">Instructor</span>
+                <span class="cv-item-sub">Aug 2026 – Present</span>
+              </div>
+              <div class="cv-item-sub" style="color: #0284c7; font-weight: 500;">Afaq Academy for Artificial Intelligence</div>
+              <ul style="margin-top: 0.35rem; padding-left: 1.25rem; font-size: 0.88rem; color: #334155; line-height: 1.5; list-style-type: disc;">
+                <li>Deliver beginner-friendly lessons on artificial intelligence concepts, modern dev tools, and software fundamentals.</li>
+                <li>Prepare structured educational content to simplify complex technical topics for learners.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Technical Projects -->
+          <div class="cv-section">
+            <h2 class="cv-sec-title">Key Engineering Projects</h2>
+            
+            <div style="margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="cv-item-title">E-Commerce Backend (Product Management System)</span>
+                <span class="cv-item-sub">NestJS · TypeScript · MongoDB · Cloudinary · JWT</span>
+              </div>
+              <p class="cv-item-desc">
+                Engineered RESTful CRUD APIs with role-based authentication (Admin/User) using NestJS Guards and Decorators. Applied class-validator DTOs and Cloudinary media pipeline.
+              </p>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="cv-item-title">Social Media Backend Engine</span>
+                <span class="cv-item-sub">Node.js · TypeScript · MongoDB · GraphQL</span>
+              </div>
+              <p class="cv-item-desc">
+                Developed custom repository pattern, reaction systems, Story module with automated TTL expiration indexing, and nested comment CRUD with cascading tree deletion.
+              </p>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="cv-item-title">Wshwshny (Anonymous Messaging Platform)</span>
+                <span class="cv-item-sub">Node.js · MongoDB · Redis · AWS · JWT</span>
+              </div>
+              <p class="cv-item-desc">
+                Engineered JWT authentication with Two-Factor Verification (2FA) and integrated Redis caching to dramatically reduce database read latency and boost throughput.
+              </p>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between;">
+                <span class="cv-item-title">Black Horse Car Garage (Graduation Project)</span>
+                <span class="cv-item-sub">ASP.NET Web Forms · SQL Server · ERD</span>
+              </div>
+              <p class="cv-item-desc">
+                Designed a complete car maintenance center operational system with normalized relational ERD modeling, stored procedures, and service scheduling workflows.
+              </p>
+            </div>
+          </div>
+
+          <!-- Technical Skills Breakdown -->
+          <div class="cv-section" style="margin-bottom: 0;">
+            <h2 class="cv-sec-title">Technical Skills</h2>
+            <div class="cv-skills-grid">
+              <div><strong>Languages:</strong> JavaScript, TypeScript, SQL</div>
+              <div><strong>Backend:</strong> Node.js, Express.js, NestJS, RESTful APIs, GraphQL, MVC, OOP, Repository Pattern, Modular Architecture</div>
+              <div><strong>Databases:</strong> MongoDB, Mongoose (ODM), SQL Server, Database Design (ERD)</div>
+              <div><strong>Auth & Security:</strong> JWT, 2FA Verification, RBAC, Guards & Decorators, DTO Validation (class-validator)</div>
+              <div><strong>Tools & Cloud:</strong> Git, GitHub, Postman, Redis, AWS, Cloudinary</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       COMMAND PALETTE (CTRL+K / CMD+K)
+       ========================================================================== -->
+  <div class="modal-overlay" id="cmd-palette-modal" role="dialog" aria-modal="true" aria-label="Command Palette">
+    <div class="cmd-palette-window">
+      <div class="cmd-palette-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="cmd-palette-input" class="cmd-palette-search" placeholder="Type a command or jump to section... (e.g. projects, cv, contact)" autocomplete="off">
+        <span class="cmd-kbd">ESC to close</span>
+      </div>
+      <div class="cmd-palette-list" id="cmd-palette-list"></div>
+      <div class="cmd-palette-footer">
+        <span>Navigation: <kbd class="cmd-kbd">↑</kbd> <kbd class="cmd-kbd">↓</kbd></span>
+        <span>Select: <kbd class="cmd-kbd">ENTER</kbd></span>
+        <span>Toggle: <kbd class="cmd-kbd">CTRL+K</kbd></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast-msg" role="alert"></div>
+
+  <!-- Application Scripts -->
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
