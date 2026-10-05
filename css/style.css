@@ -170,6 +170,7 @@ ul {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text);
+  margin-right: 1.5rem; /* Ensure 24px minimum gap from nav */
 }
 
 .brand-prompt {
@@ -1827,6 +1828,25 @@ section {
   }
   .cv-skills-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav-link .nav-num {
+    display: none;
+  }
+  .nav-links {
+    gap: 0.5rem;
+  }
+  .nav-link {
+    padding: 0.4rem 0.3rem;
+    font-size: 0.8rem;
+  }
+  .brand-logo {
+    margin-right: 1rem;
+  }
+  .nav-cta {
+    padding: 0.4rem 0.5rem;
   }
 }
 
