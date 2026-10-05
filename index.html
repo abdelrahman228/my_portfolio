@@ -7,31 +7,33 @@
   <meta name="keywords" content="Abdulrahman Mohammed Eid, Backend Engineer, Node.js, NestJS, TypeScript, MongoDB, Redis, Software Engineer, Portfolio, Egypt">
   <meta name="author" content="Abdulrahman Mohammed Eid">
   <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#080b10">
+  <meta name="theme-color" content="#0A0F1A">
 
   <!-- Open Graph Metadata -->
   <meta property="og:title" content="Abdulrahman Mohammed Eid | Backend Software Engineer">
   <meta property="og:description" content="Node.js · TypeScript · NestJS · Scalable, secure, and high-performance backend systems.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://abdelrahman228.github.io/my_portfolio/">
-  <meta property="og:image" content="https://abdelrahman228.github.io/my_portfolio/assets/images/avatar.jpg">
+  <meta property="og:image" content="https://abdelrahman228.github.io/my_portfolio/assets/images/og-image.png">
 
   <!-- Twitter Card Metadata -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Abdulrahman Mohammed Eid | Backend Software Engineer">
   <meta name="twitter:description" content="Node.js · TypeScript · NestJS · Scalable, secure, and high-performance backend systems.">
-  <meta name="twitter:image" content="https://abdelrahman228.github.io/my_portfolio/assets/images/avatar.jpg">
+  <meta name="twitter:image" content="https://abdelrahman228.github.io/my_portfolio/assets/images/og-image.png">
 
   <title>Abdulrahman Mohammed Eid | Backend Software Engineer</title>
 
-  <!-- Typography: Inter and JetBrains Mono with font-display swap -->
+  <!-- Typography: Inter and JetBrains Mono with non-blocking load -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
 
-  <!-- Favicon -->
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -61,6 +63,7 @@
   <header class="site-header">
     <div class="container navbar">
       <a href="#hero" class="brand-logo" aria-label="Homepage">
+        <img src="assets/images/logo.png" alt="Abdulrahman Mohammed Eid Logo" width="34" height="34" class="header-brand-logo">
         <span class="brand-prompt">eid@backend:~$</span>
         <span class="brand-cursor"></span>
       </a>
@@ -74,9 +77,9 @@
       </nav>
 
       <div style="display: flex; align-items: center; gap: 0.75rem;">
-        <button class="nav-cta" id="cmd-palette-btn" style="background: rgba(255,255,255,0.04); border-color: var(--border-subtle); color: var(--text-muted); padding: 0.45rem 0.75rem;" aria-label="Open Command Palette" title="Command Palette (Ctrl+K)">
+        <button class="nav-cta" id="cmd-palette-btn" style="background: rgba(255,255,255,0.04); border-color: var(--border); color: var(--muted); padding: 0.45rem 0.75rem;" aria-label="Open Command Palette" title="Command Palette (Ctrl+K)">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <span style="font-size: 0.75rem; color: var(--text-dim); background: rgba(255,255,255,0.08); padding: 0.1rem 0.35rem; border-radius: 4px;">⌘K</span>
+          <span style="font-size: 0.75rem; color: var(--muted); background: rgba(255,255,255,0.08); padding: 0.1rem 0.35rem; border-radius: 4px;">⌘K</span>
         </button>
 
         <button class="nav-cta open-cv-btn" id="header-cv-btn" aria-label="View Curriculum Vitae">
@@ -184,7 +187,7 @@
             
             <div class="terminal-interactive-row">
               <span class="terminal-prompt">eid@server:~$</span>
-              <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="help, bio, skills, projects..." aria-label="Terminal command input">
+              <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type help" aria-label="Terminal command input">
             </div>
           </div>
 
@@ -216,7 +219,7 @@
           <!-- Left: Professional Avatar & Meta -->
           <div class="about-avatar-card">
             <div class="avatar-wrapper">
-              <img src="assets/images/avatar.jpg" alt="Abdulrahman Mohammed Eid - Backend Engineer" class="avatar-img" width="400" height="400" loading="lazy">
+              <img src="assets/images/avatar.jpg" alt="Abdulrahman Mohammed Eid - Backend Engineer" class="avatar-img" width="400" height="400" decoding="async" fetchpriority="high">
             </div>
             <div class="about-avatar-meta">
               <div class="avatar-status-pill">
@@ -242,7 +245,7 @@
               </div>
               <div class="highlight-content">
                 <h4>Route Academy Backend Node.js — Top Achiever</h4>
-                <p>Completed the Route Academy intensive Backend Node.js Course (Top Achiever) honors, mastering advanced API architecture, asynchronous concurrency, authentication security, and database modeling.</p>
+                <p>Completed the Route Academy intensive Backend Node.js course and was recognized as a Top Achiever, mastering advanced API architecture, asynchronous concurrency, authentication security, and database modeling.</p>
               </div>
             </div>
 
@@ -255,7 +258,7 @@
                 <h4>Bachelor's Degree in Business Information Systems (BIS)</h4>
                 <div class="edu-institution">El Motatawera Higher Institute, Haram – Giza</div>
                 <div class="edu-date">Graduated 2026 · Information Systems & Database Specialization</div>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem;">Curriculum emphasis on relational & non-relational database design, systems analysis, object-oriented software engineering, and enterprise workflows.</p>
+                <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem;">Curriculum emphasis on relational & non-relational database design, systems analysis, object-oriented software engineering, and enterprise workflows.</p>
               </div>
             </div>
 
@@ -272,7 +275,7 @@
               <div class="pillar-item">
                 <h5>
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                  Ironclad Auth & RBAC
+                  Secure Auth & RBAC
                 </h5>
                 <p>JWT lifecycle management, Two-Factor Authentication (2FA), Execution Context Guards, and DTO validation.</p>
               </div>
@@ -280,7 +283,7 @@
               <div class="pillar-item">
                 <h5>
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                  High-Throughput Caching
+                  Redis Caching
                 </h5>
                 <p>In-memory caching via Redis, TTL indexing, rate-limiting, and MongoDB query optimization.</p>
               </div>
@@ -477,7 +480,7 @@
         <div class="section-header">
           <div class="section-label">// 04. System Implementations</div>
           <h2 class="section-title">Featured Backend Projects</h2>
-          <p class="section-desc">Production-grade APIs demonstrating modular design, GraphQL schemas, database indexing, Redis caching, and rigorous authentication.</p>
+          <p class="section-desc">Backend APIs demonstrating modular design, GraphQL schemas, database indexing, Redis caching, and rigorous authentication.</p>
         </div>
 
         <div class="projects-grid">
@@ -634,7 +637,7 @@
             <div class="project-body">
               <h3 class="project-title">Black Horse Car Garage (Graduation Project)</h3>
               <p class="project-desc">
-                Enterprise car maintenance center management system with comprehensive relational database modeling, work-order scheduling, and parts inventory.
+                Car maintenance management system with comprehensive relational database modeling, work-order scheduling, and parts inventory.
               </p>
 
               <div class="project-highlights-box">
@@ -746,7 +749,7 @@
           <div class="contact-form-box">
             <div class="contact-form-header">
               <span>POST /api/v1/contact-dispatch</span>
-              <span style="font-size: 0.72rem; color: var(--text-muted);">Accept: application/json</span>
+              <span style="font-size: 0.72rem; color: var(--muted);">Accept: application/json</span>
             </div>
             
             <form id="contact-form" class="form-body" action="https://formspree.io/f/mqkvrvla" method="POST" novalidate>
@@ -794,7 +797,8 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-left">
-        <div class="brand-logo" style="font-size: 0.95rem;">
+        <div class="brand-logo footer-brand" style="font-size: 0.95rem;">
+          <img src="assets/images/logo.png" alt="Abdulrahman Mohammed Eid Logo" width="28" height="28" class="footer-brand-logo">
           <span class="brand-prompt">eid@backend:~$</span>
           <span>Abdulrahman Mohammed Eid</span>
         </div>
@@ -815,7 +819,7 @@
     <div class="modal-window">
       <div class="modal-header">
         <div class="modal-title">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
           <span id="modal-project-title">Project Architecture Inspector</span>
         </div>
         <button class="modal-close-btn" id="project-modal-close" aria-label="Close modal">&times;</button>
@@ -825,22 +829,22 @@
         
         <div style="margin-bottom: 1.25rem;">
           <span class="section-label" style="margin-bottom: 0.5rem;">Tech Stack</span>
-          <div id="modal-project-stack" style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-cyan);"></div>
+          <div id="modal-project-stack" style="font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--secondary);"></div>
         </div>
 
         <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--text-main);">Architectural Overview</h4>
-          <p id="modal-project-overview" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;"></p>
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.4rem; color: var(--text);">Architectural Overview</h4>
+          <p id="modal-project-overview" style="color: var(--muted); font-size: 0.95rem; line-height: 1.6;"></p>
         </div>
 
         <div style="margin-bottom: 1.5rem;">
-          <h4 style="font-size: 1.05rem; margin-bottom: 0.6rem; color: var(--text-main);">Core Engineering Implementations</h4>
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.6rem; color: var(--text);">Core Engineering Implementations</h4>
           <ul id="modal-project-highlights" style="display: flex; flex-direction: column; gap: 0.75rem;"></ul>
         </div>
 
         <div>
-          <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--text-main);">Implementation Code Snippet</h4>
-          <pre style="background: #06090e; border: 1px solid var(--border-subtle); padding: 1rem; border-radius: 8px; font-family: var(--font-mono); font-size: 0.8rem; color: #38bdf8; overflow-x: auto;"><code id="modal-project-code"></code></pre>
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--text);">Implementation Code Snippet</h4>
+          <pre style="background: var(--bg); border: 1px solid var(--border); padding: 1rem; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--secondary); overflow-x: auto;"><code id="modal-project-code"></code></pre>
         </div>
 
         <!-- API Mock Runner Sandbox -->
@@ -857,11 +861,11 @@
           </div>
           <div class="sandbox-res-box" id="sandbox-res-box">
             <div class="sandbox-res-meta">
-              <span>Status: <strong id="sandbox-res-status" style="color: var(--accent-emerald);">HTTP 200 OK [Demo / Simulated]</strong></span>
-              <span>Latency: <strong id="sandbox-res-latency" style="color: var(--accent-cyan);">14ms</strong></span>
-              <span>Server: <span id="sandbox-res-server" style="color: #cbd5e1;">NestJS</span></span>
+              <span>Status: <strong id="sandbox-res-status" style="color: var(--primary);">HTTP 200 OK [Demo / Simulated]</strong></span>
+              <span>Latency: <strong id="sandbox-res-latency" style="color: var(--secondary);">14ms</strong></span>
+              <span>Server: <span id="sandbox-res-server" style="color: var(--text);">NestJS</span></span>
             </div>
-            <pre style="margin: 0; background: transparent; padding: 0; font-family: var(--font-mono); font-size: 0.78rem; color: #38bdf8; overflow-x: auto;"><code id="sandbox-res-json"></code></pre>
+            <pre style="margin: 0; background: transparent; padding: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--secondary); overflow-x: auto;"><code id="sandbox-res-json"></code></pre>
           </div>
         </div>
       </div>
@@ -875,7 +879,7 @@
     <div class="modal-window" style="max-width: 880px;">
       <div class="modal-header modal-action-bar">
         <div class="modal-title" id="cv-modal-title">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
           <span>Curriculum Vitae — Abdulrahman Mohammed Eid</span>
         </div>
         <div style="display: flex; align-items: center; gap: 0.75rem;">
@@ -927,7 +931,7 @@
             <div>
               <div style="display: flex; justify-content: space-between;">
                 <span class="cv-item-title">Route Academy Backend Node.js Course (Top Achiever)</span>
-                <span class="cv-item-sub" style="color: #059669; font-weight: 600;">Top Achiever</span>
+                <span class="cv-item-sub" style="color: var(--primary); font-weight: 600;">Top Achiever</span>
               </div>
               <div class="cv-item-sub">Comprehensive professional specialization in advanced backend architecture, REST API design, security, and databases.</div>
             </div>
@@ -941,8 +945,8 @@
                 <span class="cv-item-title">Instructor</span>
                 <span class="cv-item-sub">Aug 2026 – Present</span>
               </div>
-              <div class="cv-item-sub" style="color: #0284c7; font-weight: 500;">Afaq Academy for Artificial Intelligence</div>
-              <ul style="margin-top: 0.35rem; padding-left: 1.25rem; font-size: 0.88rem; color: #334155; line-height: 1.5; list-style-type: disc;">
+              <div class="cv-item-sub" style="color: var(--secondary); font-weight: 500;">Afaq Academy for Artificial Intelligence</div>
+              <ul style="margin-top: 0.35rem; padding-left: 1.25rem; font-size: 0.88rem; color: var(--text); line-height: 1.5; list-style-type: disc;">
                 <li>Deliver beginner-friendly lessons on artificial intelligence concepts, modern dev tools, and software fundamentals.</li>
                 <li>Prepare structured educational content to simplify complex technical topics for learners.</li>
               </ul>
@@ -989,7 +993,7 @@
                 <span class="cv-item-sub">ASP.NET Web Forms · SQL Server · ERD</span>
               </div>
               <p class="cv-item-desc">
-                Designed a complete car maintenance center operational system with normalized relational ERD modeling, stored procedures, and service scheduling workflows.
+                Car maintenance management system with normalized relational ERD modeling, stored procedures, and service scheduling workflows.
               </p>
             </div>
           </div>
@@ -1016,7 +1020,7 @@
   <div class="modal-overlay" id="cmd-palette-modal" role="dialog" aria-modal="true" aria-label="Command Palette">
     <div class="cmd-palette-window">
       <div class="cmd-palette-header">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <input type="text" id="cmd-palette-input" class="cmd-palette-search" placeholder="Type a command or jump to section... (e.g. projects, cv, contact)" autocomplete="off">
         <span class="cmd-kbd">ESC to close</span>
       </div>
