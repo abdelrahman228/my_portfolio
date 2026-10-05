@@ -103,7 +103,7 @@ const path = require('path');
   assert(!pageContent.includes('Production-grade APIs'), '"Production-grade APIs" replaced with "Backend APIs"');
   assert(pageContent.includes('Backend APIs'), '"Backend APIs" is present');
   assert(!pageContent.includes('Enterprise car maintenance center management system'), '"Enterprise car maintenance center management system" replaced');
-  assert(pageContent.includes('Car maintenance management system'), '"Car maintenance management system" is present');
+  assert(pageContent.includes('Car maintenance center management system'), '"Car maintenance center management system" is present');
   assert(!pageContent.includes('Ironclad Auth & RBAC'), '"Ironclad Auth & RBAC" replaced');
   assert(!pageContent.includes('Ironclad Auth &amp; RBAC'), '"Ironclad Auth &amp; RBAC" replaced');
   assert(pageContent.includes('Secure Auth &'), '"Secure Auth & RBAC" is present');
@@ -190,7 +190,7 @@ const path = require('path');
   assert(cvModalVisible, 'CV modal opens on button click');
   const cvContent = await page.textContent('#cv-modal');
   assert(cvContent.includes('Graduated 2026'), 'CV modal contains "Graduated 2026"');
-  assert(cvContent.includes('Car maintenance management system'), 'CV modal contains updated project wording');
+  assert(cvContent.includes('Car maintenance center management system'), 'CV modal contains updated project wording');
   assert(!cvContent.includes('dramatically'), 'CV modal has no "dramatically"');
 
   await page.keyboard.press('Escape');
@@ -268,15 +268,25 @@ const path = require('path');
   const cssContent = fs.readFileSync(path.join(__dirname, '..', 'css', 'style.css'), 'utf8');
   const htmlContent = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
   const jsContent = fs.readFileSync(path.join(__dirname, '..', 'js', 'main.js'), 'utf8');
-  const cvHtmlContent = fs.readFileSync(path.join(__dirname, '..', 'assets', 'cv', 'Abdulrahman_Mohammed_Eid_CV.html'), 'utf8');
-
   const forbiddenColors = ['#3DDC97', '#10b981', '#059669', 'accent-emerald', 'accent-cyan', '#38BDF8'];
-  
   for (const c of forbiddenColors) {
     assert(!cssContent.toLowerCase().includes(c.toLowerCase()), `No "${c}" in css/style.css`);
     assert(!htmlContent.toLowerCase().includes(c.toLowerCase()), `No "${c}" in index.html`);
     assert(!jsContent.toLowerCase().includes(c.toLowerCase()), `No "${c}" in js/main.js`);
-    assert(!cvHtmlContent.toLowerCase().includes(c.toLowerCase()), `No "${c}" in CV html`);
+  }
+
+  // 12.5. CV File, PDF Links, and Forbidden Words
+  console.log('\n--- 12.5. CONTENT MATCHING & PDF VALIDATION ---');
+  const pdfExists = fs.existsSync(path.join(__dirname, '..', 'assets', 'cv', 'Abdulrahman_Mohammed_Eid_CV.pdf'));
+  assert(pdfExists, 'PDF CV file exists at assets/cv/Abdulrahman_Mohammed_Eid_CV.pdf');
+  
+  const heroPdfHref = await page.$eval('#hero-cv-btn', el => el.getAttribute('href'));
+  assert(heroPdfHref.includes('.pdf'), 'Hero CV button points to PDF');
+  
+  const forbiddenTerms = ['microservices', 'stored procedures', 'operational analytics reporting', 'work-order scheduling', 'parts inventory', 'maximum uptime'];
+  for (const term of forbiddenTerms) {
+    assert(!htmlContent.toLowerCase().includes(term.toLowerCase()), `No "${term}" in index.html`);
+    assert(!jsContent.toLowerCase().includes(term.toLowerCase()), `No "${term}" in js/main.js`);
   }
 
   // 13. WCAG AA Contrast Audit

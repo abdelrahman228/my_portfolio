@@ -142,7 +142,7 @@ export class ProductsController {
         message: "Product created with DTO validation and Cloudinary asset pipeline",
         product: {
           id: "prod_66f81a90c",
-          title: "Enterprise Microservices Architecture Guide",
+          title: "Enterprise Backend Architecture Guide",
           sku: "BK-NEST-01",
           price: 49.99,
           stock: 85,
@@ -242,13 +242,11 @@ export async function getCachedUserInbox(userId: string) {
     image: 'assets/images/project-blackhorse.jpg',
     method: 'SQL EXEC',
     endpoint: 'sp_RegisterMaintenanceOrder (SQL Server)',
-    stack: 'ASP.NET Web Forms · C# · SQL Server · Database Design (ERD)',
-    overview: 'Comprehensive vehicle maintenance center operational ERP designed for graduation project with complete relational database modeling.',
+    stack: 'ASP.NET Web Forms · SQL Server',
+    overview: 'Car maintenance center management system with a relational database designed using ERD modeling in SQL Server, built with ASP.NET Web Forms.',
     highlights: [
-      'Designed normalized relational database schema (ERD) with primary/foreign key constraints, indexes, and stored procedures in SQL Server.',
-      'Engineered multi-tier maintenance center workflows covering client intake, technician assignment, spare parts stock, and invoicing.',
-      'Built business logic layer in C# to calculate work-order totals and enforce scheduling conflict detection.',
-      'Modeled reporting views for operational analytics on service duration and revenue.'
+      'Built a car maintenance center management system and designed its database with ERD modeling in SQL Server.',
+      'Developed the front end with HTML, CSS, and JavaScript alongside ASP.NET Web Forms.'
     ],
     sampleCode: `-- Normalized SQL Server Schema Sample (Service Scheduling & Logs)
 CREATE TABLE Service_Logs (
@@ -764,6 +762,7 @@ function initCommandPalette() {
     { label: 'Inspect Wshwshny Messaging (Redis/2FA)', category: 'Projects', shortcut: 'P 3', action: () => window.openProjectModal('wshwshny') },
     { label: 'Inspect Black Horse Garage (SQL Server)', category: 'Projects', shortcut: 'P 4', action: () => window.openProjectModal('blackhorse') },
     { label: 'View Curriculum Vitae (Printable CV)', category: 'Resume', shortcut: 'V CV', action: () => window.openCvModal() },
+    { label: 'Download Curriculum Vitae (PDF)', category: 'Resume', shortcut: 'D CV', action: () => { const a = document.createElement('a'); a.href = 'assets/cv/Abdulrahman_Mohammed_Eid_CV.pdf'; a.download = 'Abdulrahman_Mohammed_Eid_CV.pdf'; a.click(); } },
     { label: 'Copy Phone (01063887051)', category: 'Contact', shortcut: 'C P', action: () => { navigator.clipboard.writeText('01063887051'); showToast('Copied phone: 01063887051'); } },
     { label: 'Copy Email (abdelrahman782eid@gmail.com)', category: 'Contact', shortcut: 'C E', action: () => { navigator.clipboard.writeText('abdelrahman782eid@gmail.com'); showToast('Copied email: abdelrahman782eid@gmail.com'); } },
     { label: 'Open GitHub Profile', category: 'Links', shortcut: 'EXT', action: () => window.open('https://github.com/abdelrahman228', '_blank') },

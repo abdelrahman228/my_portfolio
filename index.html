@@ -85,6 +85,10 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           <span>View CV</span>
         </button>
+        <a href="assets/cv/Abdulrahman_Mohammed_Eid_CV.pdf" download="Abdulrahman_Mohammed_Eid_CV.pdf" class="nav-cta" style="background: rgba(245, 165, 36, 0.1); color: var(--primary); border-color: rgba(245, 165, 36, 0.3);" aria-label="Download Curriculum Vitae">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Download CV</span>
+        </a>
       </div>
 
       <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
@@ -99,7 +103,8 @@
       <a href="#experience" class="nav-link">// 03. Experience</a>
       <a href="#projects" class="nav-link">// 04. Projects</a>
       <a href="#contact" class="nav-link">// 05. Contact</a>
-      <button class="btn btn-primary open-cv-btn" style="width: 100%;">View / Download CV</button>
+      <button class="btn btn-primary open-cv-btn" style="width: 100%; margin-bottom: 0.5rem;">View CV</button>
+      <a href="assets/cv/Abdulrahman_Mohammed_Eid_CV.pdf" download="Abdulrahman_Mohammed_Eid_CV.pdf" class="btn btn-secondary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">Download CV</a>
     </div>
   </header>
 
@@ -125,14 +130,14 @@
           </div>
 
           <p class="hero-subtitle">
-            Seeking a junior or internship role to contribute to scalable, well-structured backend systems. Dedicated to architecting robust RESTful & GraphQL APIs, microservices, and reliable database solutions.
+            Seeking a junior or internship role to contribute to scalable, well-structured backend systems. Dedicated to architecting robust RESTful & GraphQL APIs, and reliable database solutions.
           </p>
 
           <div class="hero-actions">
-            <button class="btn btn-primary open-cv-btn" id="hero-cv-btn">
+            <a href="assets/cv/Abdulrahman_Mohammed_Eid_CV.pdf" download="Abdulrahman_Mohammed_Eid_CV.pdf" class="btn btn-primary" id="hero-cv-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               <span>Download CV</span>
-            </button>
+            </a>
 
             <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -193,6 +198,7 @@
           <div class="terminal-quick-cmds">
             <span class="quick-cmd-label">Quick Run:</span>
             <button class="quick-cmd-btn" data-cmd="bio" aria-label="Quick run bio command">bio</button>
+            <button class="quick-cmd-btn" data-cmd="cv" aria-label="Quick run cv command">cv (download)</button>
             <button class="quick-cmd-btn" data-cmd="skills" aria-label="Quick run skills command">skills</button>
             <button class="quick-cmd-btn" data-cmd="projects" aria-label="Quick run projects command">projects</button>
             <button class="quick-cmd-btn" data-cmd="curl /api/v1/bio" aria-label="Quick run curl bio command">curl bio</button>
@@ -292,7 +298,7 @@
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                   Scalable Database Modeling
                 </h5>
-                <p>MongoDB ODM schemas, normalized SQL Server ERDs, foreign keys, stored procedures, and cascading deletions.</p>
+                <p>MongoDB ODM schemas, normalized SQL Server ERDs, foreign keys, and cascading deletions.</p>
               </div>
             </div>
           </div>
@@ -454,15 +460,11 @@
               <div class="timeline-bullets">
                 <div class="timeline-bullet-item">
                   <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                  <span>Deliver beginner-friendly lessons on artificial intelligence concepts, modern developer tools, and data processing workflows for learners.</span>
+                  <span>Deliver beginner-friendly lessons on artificial intelligence concepts and tools.</span>
                 </div>
                 <div class="timeline-bullet-item">
                   <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                  <span>Prepare structured educational modules and interactive technical exercises to simplify complex computational and algorithmic topics.</span>
-                </div>
-                <div class="timeline-bullet-item">
-                  <svg class="bullet-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                  <span>Foster problem-solving and clean coding discipline among students transitioning into software engineering tracks.</span>
+                  <span>Prepare structured educational content and simplify technical topics for learners.</span>
                 </div>
               </div>
             </div>
@@ -596,7 +598,7 @@
 
               <div class="project-highlights-box">
                 <div class="highlight-title">Architectural Highlights:</div>
-                <div class="highlight-desc">Engineered JWT authentication with Two-Factor Verification (2FA), in-memory Redis response caching, and AWS cloud deployment for maximum uptime.</div>
+                <div class="highlight-desc">Engineered JWT authentication with Two-Factor Verification (2FA), integrated Redis caching, and deployed the backend to AWS.</div>
               </div>
 
               <div class="project-tags">
@@ -636,20 +638,19 @@
             <div class="project-body">
               <h3 class="project-title">Black Horse Car Garage (Graduation Project)</h3>
               <p class="project-desc">
-                Car maintenance management system with comprehensive relational database modeling, work-order scheduling, and parts inventory.
+                Car maintenance center management system with a relational database designed using ERD modeling in SQL Server, built with ASP.NET Web Forms.
               </p>
 
               <div class="project-highlights-box">
                 <div class="highlight-title">Architectural Highlights:</div>
-                <div class="highlight-desc">Designed normalized Entity-Relationship Diagrams (ERD), complex SQL Server foreign key hierarchies, stored procedures, and operational analytics reporting.</div>
+                <div class="highlight-desc">Built a car maintenance center management system and designed its database with ERD modeling in SQL Server. Developed the front end with HTML, CSS, and JavaScript alongside ASP.NET Web Forms.</div>
               </div>
 
               <div class="project-tags">
                 <span class="project-pill">ASP.NET Web Forms</span>
                 <span class="project-pill">SQL Server</span>
                 <span class="project-pill">ERD Modeling</span>
-                <span class="project-pill">Stored Procedures</span>
-                <span class="project-pill">C#</span>
+                <span class="project-pill">JavaScript</span>
               </div>
 
               <div class="project-actions">
@@ -882,9 +883,9 @@
           <span>Curriculum Vitae — Abdulrahman Mohammed Eid</span>
         </div>
         <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <a href="assets/cv/Abdulrahman_Mohammed_Eid_CV.html" target="_blank" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.85rem; text-decoration: none;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            <span>Open Standalone</span>
+          <a href="assets/cv/Abdulrahman_Mohammed_Eid_CV.pdf" download="Abdulrahman_Mohammed_Eid_CV.pdf" class="btn btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.85rem; text-decoration: none;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download PDF</span>
           </a>
           <button class="btn btn-primary" id="print-cv-btn" style="padding: 0.4rem 0.9rem; font-size: 0.85rem;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
@@ -946,8 +947,8 @@
               </div>
               <div class="cv-item-sub" style="color: var(--secondary); font-weight: 500;">Afaq Academy for Artificial Intelligence</div>
               <ul style="margin-top: 0.35rem; padding-left: 1.25rem; font-size: 0.88rem; color: var(--text); line-height: 1.5; list-style-type: disc;">
-                <li>Deliver beginner-friendly lessons on artificial intelligence concepts, modern dev tools, and software fundamentals.</li>
-                <li>Prepare structured educational content to simplify complex technical topics for learners.</li>
+                <li>Deliver beginner-friendly lessons on artificial intelligence concepts and tools.</li>
+                <li>Prepare structured educational content and simplify technical topics for learners.</li>
               </ul>
             </div>
           </div>
@@ -992,7 +993,7 @@
                 <span class="cv-item-sub">ASP.NET Web Forms · SQL Server · ERD</span>
               </div>
               <p class="cv-item-desc">
-                Car maintenance management system with normalized relational ERD modeling, stored procedures, and service scheduling workflows.
+                Car maintenance center management system with a relational database designed using ERD modeling in SQL Server, built with ASP.NET Web Forms.
               </p>
             </div>
           </div>

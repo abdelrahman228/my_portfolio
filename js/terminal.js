@@ -25,9 +25,16 @@
 <div class="terminal-line">  <span class="output-cyan">contact</span>    - Print contact methods & social links</div>
 <div class="terminal-line">  <span class="output-cyan">status</span>     - Check server health & architecture metrics</div>
 <div class="terminal-line">  <span class="output-cyan">curl &lt;url&gt;</span>  - Simulate HTTP GET endpoint request</div>
-<div class="terminal-line">  <span class="output-cyan">cat &lt;file&gt;</span> - Read virtual filesystem file (e.g., cat bio.json)</div>
+<div class="terminal-line">  <span class="output-cyan">cv</span>           - Download PDF Curriculum Vitae</div>
 <div class="terminal-line">  <span class="output-cyan">clear</span>      - Clear terminal screen</div>
 `,
+    cv: () => {
+      const a = document.createElement('a');
+      a.href = 'assets/cv/Abdulrahman_Mohammed_Eid_CV.pdf';
+      a.download = 'Abdulrahman_Mohammed_Eid_CV.pdf';
+      a.click();
+      return `<div class="terminal-line output-success">✓ Initiated PDF Download: Abdulrahman_Mohammed_Eid_CV.pdf</div>`;
+    },
     bio: () => `
 <div class="terminal-line output-success">❯ Abdulrahman Mohammed Eid</div>
 <div class="terminal-line output-info">Role: Backend Software Engineer | Node.js · TypeScript · NestJS (Graduated 2026)</div>
