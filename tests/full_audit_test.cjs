@@ -46,7 +46,11 @@ const path = require('path');
   console.log('\n--- 3. BRAND ASSETS & METADATA VERIFICATION ---');
   const imagesDir = path.join(__dirname, '..', 'assets', 'images');
   
-  // Check files exist and sizes
+  // Check authentic brand source exists and invented SVG is removed
+  assert(fs.existsSync(path.join(imagesDir, 'brand-logo.png')), 'Authentic assets/images/brand-logo.png exists');
+  assert(!fs.existsSync(path.join(imagesDir, 'favicon.svg')), 'Invented assets/images/favicon.svg is completely removed');
+
+  // Check generated files exist and sizes
   const logoStats = fs.statSync(path.join(imagesDir, 'logo.png'));
   assert(fs.existsSync(path.join(imagesDir, 'logo.png')), 'assets/images/logo.png exists');
   assert(logoStats.size / 1024 < 60, `logo.png size < 60KB (${(logoStats.size / 1024).toFixed(2)} KB)`);
