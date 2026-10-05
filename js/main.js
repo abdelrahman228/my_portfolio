@@ -582,12 +582,6 @@ function initContactForm() {
         headers: { 'Accept': 'application/json' }
       });
 
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-        <span>Send Message (POST)</span>
-      `;
-
       if (res.ok) {
         statusMsg.className = 'form-status-msg success';
         statusMsg.innerHTML = `
@@ -605,13 +599,14 @@ function initContactForm() {
         statusMsg.innerHTML = `<strong>Submission Status:</strong> ${errorMsg} Please email abdelrahman782eid@gmail.com directly.`;
       }
     } catch (err) {
+      statusMsg.className = 'form-status-msg error';
+      statusMsg.innerHTML = `<strong>Network Error:</strong> Failed to connect to gateway. Please check your internet connection or email directly.`;
+    } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = `
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         <span>Send Message (POST)</span>
       `;
-      statusMsg.className = 'form-status-msg error';
-      statusMsg.innerHTML = `<strong>Network Error:</strong> Failed to connect to gateway. Please check your internet connection or email directly.`;
     }
   });
 }
