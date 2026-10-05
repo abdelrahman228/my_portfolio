@@ -30,6 +30,29 @@ const path = require('path');
     assert(scrollWidth <= innerWidth, `No horizontal scroll at ${width}px (scrollWidth: ${scrollWidth} <= innerWidth: ${innerWidth})`);
   }
 
+  console.log('\n--- 1.5. DESKTOP HEADER OVERLAP ASSERTION ---');
+  for (const width of [1024, 1100, 1280, 1440, 1920]) {
+    await page.setViewportSize({ width, height: 800 });
+    await page.goto('http://localhost:3000', { waitUntil: 'networkidle' });
+    await page.waitForTimeout(300); // Wait for flex layout/animations to settle
+    
+    const overlapData = await page.evaluate(() => {
+      const brand = document.querySelector('.brand-logo');
+      const firstNav = document.querySelector('.nav-link');
+      if (!brand || !firstNav) return null;
+      
+      const brandRect = brand.getBoundingClientRect();
+      const navRect = firstNav.getBoundingClientRect();
+      return { space: navRect.left - brandRect.right };
+    });
+    
+    if (overlapData) {
+      assert(overlapData.space >= 16, `Width ${width}px: Gap between brand and first nav is >= 16px (Actual: ${overlapData.space.toFixed(2)}px)`);
+    } else {
+      console.log(`[SKIPPED] Nav link not visible at ${width}px`);
+    }
+  }
+
   // Set desktop viewport for interaction tests
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('http://localhost:3000', { waitUntil: 'networkidle' });
