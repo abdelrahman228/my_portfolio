@@ -572,7 +572,7 @@ function initContactForm() {
       <span>Sending POST Request...</span>
     `;
 
-    const endpoint = form.getAttribute('action') || 'https://formspree.io/f/mqkvrvla';
+    const endpoint = form.getAttribute('action') || 'https://formspree.io/f/xrpegnea';
     const formData = new FormData(form);
 
     try {
@@ -597,22 +597,21 @@ function initContactForm() {
         showToast('HTTP 200 OK: Message transmitted successfully!');
       } else {
         const data = await res.json().catch(() => ({}));
+        let errorMsg = data.error || 'Failed to deliver message via gateway.';
+        if (data.errors && Array.isArray(data.errors)) {
+          errorMsg = data.errors.map(e => e.message).join(', ');
+        }
         statusMsg.className = 'form-status-msg error';
-        statusMsg.innerHTML = `<strong>Submission Status:</strong> ${data.error || 'Failed to deliver message via gateway. Please email abdelrahman782eid@gmail.com directly.'}`;
+        statusMsg.innerHTML = `<strong>Submission Status:</strong> ${errorMsg} Please email abdelrahman782eid@gmail.com directly.`;
       }
     } catch (err) {
-      // Offline / Simulated success fallback for local development & mock tests
       submitBtn.disabled = false;
       submitBtn.innerHTML = `
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         <span>Send Message (POST)</span>
       `;
-      statusMsg.className = 'form-status-msg success';
-      statusMsg.innerHTML = `
-        <strong>HTTP 200 OK:</strong> Message received! Payload dispatched to <code>abdelrahman782eid@gmail.com</code>. Thank you, ${name}!
-      `;
-      form.reset();
-      showToast('HTTP 200 OK: Message transmitted successfully!');
+      statusMsg.className = 'form-status-msg error';
+      statusMsg.innerHTML = `<strong>Network Error:</strong> Failed to connect to gateway. Please check your internet connection or email directly.`;
     }
   });
 }
