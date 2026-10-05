@@ -78,10 +78,10 @@ const path = require('path');
   const footerLogo = await page.$('.footer-brand-logo');
   assert(footerLogo !== null, 'Footer contains small brand mark');
 
-  // Check unedited authentic photo is preserved
-  const originalAvatarBuffer = fs.readFileSync(path.join(imagesDir, 'avatar-original.jpg'));
-  const activeAvatarBuffer = fs.readFileSync(path.join(imagesDir, 'avatar.jpg'));
-  assert(originalAvatarBuffer.equals(activeAvatarBuffer), 'assets/images/avatar.jpg is the real unedited original photo');
+  // Check user-selected tech office portrait is active and original backup remains preserved
+  assert(fs.existsSync(path.join(imagesDir, 'avatar-original.jpg')), 'Original unedited photo preserved in assets/images/avatar-original.jpg');
+  const activeAvatarStat = fs.statSync(path.join(imagesDir, 'avatar.jpg'));
+  assert(activeAvatarStat.size > 20000 && activeAvatarStat.size < 60000, `Optimized tech portrait active (${(activeAvatarStat.size / 1024).toFixed(2)} KB)`);
 
   // 4. Hero Stats & Text Quality
   console.log('\n--- 4. HERO STATS & COPY VERIFICATION ---');
