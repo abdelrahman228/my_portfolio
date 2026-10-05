@@ -13,15 +13,22 @@
   <meta property="og:title" content="Abdulrahman Mohammed Eid | Backend Software Engineer">
   <meta property="og:description" content="Node.js · TypeScript · NestJS · Scalable, secure, and high-performance backend systems.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdelrahman228.github.io/my_portfolio/">
+  <meta property="og:image" content="https://abdelrahman228.github.io/my_portfolio/assets/images/avatar.jpg">
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abdulrahman Mohammed Eid | Backend Software Engineer">
+  <meta name="twitter:description" content="Node.js · TypeScript · NestJS · Scalable, secure, and high-performance backend systems.">
+  <meta name="twitter:image" content="https://abdelrahman228.github.io/my_portfolio/assets/images/avatar.jpg">
 
   <title>Abdulrahman Mohammed Eid | Backend Software Engineer</title>
 
-  <!-- Typography: Inter and JetBrains Mono -->
+  <!-- Typography: Inter and JetBrains Mono with font-display swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <meta property="og:image" content="assets/images/avatar.jpg">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"></noscript>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -37,15 +44,16 @@
       <span class="status-indicator">
         <span class="status-dot"></span>
         <span>SYSTEM OPERATIONAL</span>
+        <span class="status-sim-badge">[Demo / Simulated]</span>
       </span>
-      <span class="status-metric">NODE: <span class="val">v20.18.0</span></span>
-      <span class="status-metric">NESTJS: <span class="val">v10.4</span></span>
-      <span class="status-metric">REDIS CACHE: <span class="val">ACTIVE</span></span>
+      <span class="status-metric status-secondary-stat">NODE: <span class="val">v20.18.0</span></span>
+      <span class="status-metric status-secondary-stat">NESTJS: <span class="val">v10.4</span></span>
+      <span class="status-metric status-secondary-stat">REDIS: <span class="val">ACTIVE</span></span>
     </div>
     <div class="system-status-right">
       <span class="status-metric">LATENCY: <span id="live-latency" class="val">14ms</span></span>
-      <span class="status-metric">REGION: <span class="val">ME-CENTRAL (GIZA)</span></span>
-      <span class="status-metric">ENV: <span class="val">PRODUCTION</span></span>
+      <span class="status-metric status-secondary-stat">REGION: <span class="val">ME-CENTRAL (GIZA)</span></span>
+      <span class="status-metric status-secondary-stat">ENV: <span class="val">PRODUCTION</span></span>
     </div>
   </div>
 
@@ -110,7 +118,7 @@
 
           <div class="hero-title-tag">
             <span>Backend Software Engineer</span>
-            <span class="divider">|</span>
+            <span class="divider hero-divider">|</span>
             <span class="techs">Node.js · TypeScript · NestJS</span>
           </div>
 
@@ -137,16 +145,16 @@
 
           <div class="hero-stats-strip">
             <div class="stat-item">
-              <div class="stat-val">Route <span>Top</span></div>
-              <div class="stat-lbl">Achiever Award</div>
+              <div class="stat-val">Top Achiever</div>
+              <div class="stat-lbl">Route Academy</div>
             </div>
             <div class="stat-item">
-              <div class="stat-val">4<span>+</span></div>
-              <div class="stat-lbl">Enterprise Projects</div>
+              <div class="stat-val">4</div>
+              <div class="stat-lbl">Backend Projects</div>
             </div>
             <div class="stat-item">
-              <div class="stat-val">BIS<span>'26</span></div>
-              <div class="stat-lbl">Graduating Degree</div>
+              <div class="stat-val">BIS '26</div>
+              <div class="stat-lbl">Graduated 2026</div>
             </div>
           </div>
         </div>
@@ -164,7 +172,7 @@
               <span>zsh — bash-session-abdelrahman</span>
             </div>
             <div class="terminal-actions-bar">
-              <button class="term-action-btn" id="term-clear-btn">clear</button>
+              <button class="term-action-btn" id="term-clear-btn" aria-label="Clear terminal output">clear</button>
             </div>
           </div>
 
@@ -176,18 +184,18 @@
             
             <div class="terminal-interactive-row">
               <span class="terminal-prompt">eid@server:~$</span>
-              <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type 'help', 'bio', 'projects'..." aria-label="Terminal command input">
+              <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="help, bio, skills, projects..." aria-label="Terminal command input">
             </div>
           </div>
 
           <div class="terminal-quick-cmds">
             <span class="quick-cmd-label">Quick Run:</span>
-            <button class="quick-cmd-btn" data-cmd="bio">bio</button>
-            <button class="quick-cmd-btn" data-cmd="skills">skills</button>
-            <button class="quick-cmd-btn" data-cmd="projects">projects</button>
-            <button class="quick-cmd-btn" data-cmd="curl /api/v1/bio">curl bio</button>
-            <button class="quick-cmd-btn" data-cmd="status">status</button>
-            <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+            <button class="quick-cmd-btn" data-cmd="bio" aria-label="Quick run bio command">bio</button>
+            <button class="quick-cmd-btn" data-cmd="skills" aria-label="Quick run skills command">skills</button>
+            <button class="quick-cmd-btn" data-cmd="projects" aria-label="Quick run projects command">projects</button>
+            <button class="quick-cmd-btn" data-cmd="curl /api/v1/bio" aria-label="Quick run curl bio command">curl bio</button>
+            <button class="quick-cmd-btn" data-cmd="status" aria-label="Quick run status command">status</button>
+            <button class="quick-cmd-btn" data-cmd="clear" aria-label="Quick clear terminal">clear</button>
           </div>
         </div>
       </div>
@@ -209,15 +217,15 @@
           <div class="about-avatar-card">
             <div class="avatar-wrapper">
               <img src="assets/images/avatar.jpg" alt="Abdulrahman Mohammed Eid - Backend Engineer" class="avatar-img" width="400" height="400" loading="lazy">
-              <div class="avatar-badge-overlay">
+            </div>
+            <div class="about-avatar-meta">
+              <div class="avatar-status-pill">
                 <span class="status-dot"></span>
                 <span>Open for Junior / Internship Roles</span>
               </div>
-            </div>
-            <div class="about-avatar-meta">
               <h3 class="about-avatar-name">Abdulrahman Mohammed Eid</h3>
               <p class="about-avatar-role">Backend Software Engineer</p>
-              <p style="font-size: 0.8rem; color: var(--text-dim); font-family: var(--font-mono);">Hadayek October, Giza, Egypt</p>
+              <p class="about-avatar-location">Hadayek October, Giza, Egypt</p>
             </div>
           </div>
 
@@ -234,7 +242,7 @@
               </div>
               <div class="highlight-content">
                 <h4>Route Academy Backend Node.js — Top Achiever</h4>
-                <p>Completed the Route Academy intensive Backend Node.js engineering diploma with Top Achiever honors, mastering advanced API architecture, asynchronous concurrency, authentication security, and database modeling.</p>
+                <p>Completed the Route Academy intensive Backend Node.js Course (Top Achiever) honors, mastering advanced API architecture, asynchronous concurrency, authentication security, and database modeling.</p>
               </div>
             </div>
 
@@ -246,7 +254,7 @@
               <div class="edu-info">
                 <h4>Bachelor's Degree in Business Information Systems (BIS)</h4>
                 <div class="edu-institution">El Motatawera Higher Institute, Haram – Giza</div>
-                <div class="edu-date">Class of 2026 · Information Systems & Database Specialization</div>
+                <div class="edu-date">Graduated 2026 · Information Systems & Database Specialization</div>
                 <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem;">Curriculum emphasis on relational & non-relational database design, systems analysis, object-oriented software engineering, and enterprise workflows.</p>
               </div>
             </div>
@@ -274,7 +282,7 @@
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
                   High-Throughput Caching
                 </h5>
-                <p>Sub-millisecond latency caching via Redis, TTL indexing, rate-limiting, and MongoDB query optimization.</p>
+                <p>In-memory caching via Redis, TTL indexing, rate-limiting, and MongoDB query optimization.</p>
               </div>
 
               <div class="pillar-item">
@@ -311,17 +319,15 @@
           <button class="skill-tab-btn" data-filter="tools">Tools & Cloud</button>
         </div>
 
-        <div class="skills-categories-grid">
+        <div class="skills-unified-card">
           <!-- Category 1: Languages -->
-          <div class="skill-category-card" data-category="languages">
-            <div class="skill-category-header">
-              <div class="skill-cat-title">
-                <span class="skill-cat-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                </span>
-                <span>Languages</span>
-              </div>
-              <span class="skill-cat-count">3 Skills</span>
+          <div class="skill-group" data-category="languages">
+            <div class="skill-group-title">
+              <span class="skill-cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </span>
+              <span>Languages</span>
+              <span class="skill-group-count">3 Skills</span>
             </div>
             <div class="skill-tags-wrapper">
               <span class="skill-tag featured">
@@ -340,15 +346,13 @@
           </div>
 
           <!-- Category 2: Backend & Architecture -->
-          <div class="skill-category-card" data-category="backend">
-            <div class="skill-category-header">
-              <div class="skill-cat-title">
-                <span class="skill-cat-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-                </span>
-                <span>Backend Frameworks & Patterns</span>
-              </div>
-              <span class="skill-cat-count">9 Skills</span>
+          <div class="skill-group" data-category="backend">
+            <div class="skill-group-title">
+              <span class="skill-cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </span>
+              <span>Backend Frameworks & Patterns</span>
+              <span class="skill-group-count">9 Skills</span>
             </div>
             <div class="skill-tags-wrapper">
               <span class="skill-tag featured">Node.js</span>
@@ -364,15 +368,13 @@
           </div>
 
           <!-- Category 3: Databases -->
-          <div class="skill-category-card" data-category="databases">
-            <div class="skill-category-header">
-              <div class="skill-cat-title">
-                <span class="skill-cat-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                </span>
-                <span>Databases & Persistence</span>
-              </div>
-              <span class="skill-cat-count">4 Skills</span>
+          <div class="skill-group" data-category="databases">
+            <div class="skill-group-title">
+              <span class="skill-cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </span>
+              <span>Databases & Persistence</span>
+              <span class="skill-group-count">4 Skills</span>
             </div>
             <div class="skill-tags-wrapper">
               <span class="skill-tag featured">MongoDB</span>
@@ -383,35 +385,31 @@
           </div>
 
           <!-- Category 4: Authentication & Security -->
-          <div class="skill-category-card" data-category="security">
-            <div class="skill-category-header">
-              <div class="skill-cat-title">
-                <span class="skill-cat-icon" style="color: var(--accent-rose);">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                </span>
-                <span>Authentication & Security</span>
-              </div>
-              <span class="skill-cat-count">5 Skills</span>
+          <div class="skill-group" data-category="security">
+            <div class="skill-group-title">
+              <span class="skill-cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </span>
+              <span>Authentication & Security</span>
+              <span class="skill-group-count">5 Skills</span>
             </div>
             <div class="skill-tags-wrapper">
-              <span class="skill-tag security">JSON Web Tokens (JWT)</span>
-              <span class="skill-tag security">Two-Factor Verification (2FA)</span>
-              <span class="skill-tag security">Role-Based Access Control (RBAC)</span>
-              <span class="skill-tag security">Guards & Decorators</span>
-              <span class="skill-tag security">DTO Validation (class-validator)</span>
+              <span class="skill-tag featured">JSON Web Tokens (JWT)</span>
+              <span class="skill-tag featured">Two-Factor Verification (2FA)</span>
+              <span class="skill-tag">Role-Based Access Control (RBAC)</span>
+              <span class="skill-tag">Guards & Decorators</span>
+              <span class="skill-tag">DTO Validation (class-validator)</span>
             </div>
           </div>
 
           <!-- Category 5: Tools & Cloud -->
-          <div class="skill-category-card" data-category="tools">
-            <div class="skill-category-header">
-              <div class="skill-cat-title">
-                <span class="skill-cat-icon" style="color: var(--accent-amber);">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
-                </span>
-                <span>Tools, Cloud & Caching</span>
-              </div>
-              <span class="skill-cat-count">6 Skills</span>
+          <div class="skill-group" data-category="tools">
+            <div class="skill-group-title">
+              <span class="skill-cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </span>
+              <span>Tools, Cloud & Caching</span>
+              <span class="skill-group-count">6 Skills</span>
             </div>
             <div class="skill-tags-wrapper">
               <span class="skill-tag featured">Redis (In-Memory Cache)</span>
@@ -513,11 +511,10 @@
                 <span class="project-pill">MongoDB</span>
                 <span class="project-pill">Cloudinary</span>
                 <span class="project-pill">JWT</span>
-                <span class="project-pill">Guards/Decorators</span>
-                <span class="project-pill">class-validator</span>
               </div>
 
               <div class="project-actions">
+                <!-- TODO: Replace with specific repository URL once published -->
                 <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="project-link">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                   <span>Repository</span>
@@ -560,11 +557,10 @@
                 <span class="project-pill">MongoDB</span>
                 <span class="project-pill">GraphQL</span>
                 <span class="project-pill">Repository Pattern</span>
-                <span class="project-pill">TTL Expiry</span>
-                <span class="project-pill">Cascading Delete</span>
               </div>
 
               <div class="project-actions">
+                <!-- TODO: Replace with specific repository URL once published -->
                 <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="project-link">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                   <span>Repository</span>
@@ -598,7 +594,7 @@
 
               <div class="project-highlights-box">
                 <div class="highlight-title">Architectural Highlights:</div>
-                <div class="highlight-desc">Engineered JWT authentication with Two-Factor Verification (2FA), sub-millisecond Redis response caching, and AWS cloud deployment for maximum uptime.</div>
+                <div class="highlight-desc">Engineered JWT authentication with Two-Factor Verification (2FA), in-memory Redis response caching, and AWS cloud deployment for maximum uptime.</div>
               </div>
 
               <div class="project-tags">
@@ -607,12 +603,10 @@
                 <span class="project-pill">Redis</span>
                 <span class="project-pill">AWS</span>
                 <span class="project-pill">JWT</span>
-                <span class="project-pill">2FA Verification</span>
-                <span class="project-pill">Rate Limiting</span>
               </div>
 
               <div class="project-actions">
-                <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="project-link">
+                <a href="https://github.com/abdelrahman228/Sraha_app" target="_blank" rel="noopener noreferrer" class="project-link">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                   <span>Repository</span>
                 </a>
@@ -653,11 +647,11 @@
                 <span class="project-pill">SQL Server</span>
                 <span class="project-pill">ERD Modeling</span>
                 <span class="project-pill">Stored Procedures</span>
-                <span class="project-pill">Relational DB</span>
                 <span class="project-pill">C#</span>
               </div>
 
               <div class="project-actions">
+                <!-- TODO: Replace with specific repository URL once published -->
                 <a href="https://github.com/abdelrahman228" target="_blank" rel="noopener noreferrer" class="project-link">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                   <span>Repository</span>
@@ -752,27 +746,33 @@
           <div class="contact-form-box">
             <div class="contact-form-header">
               <span>POST /api/v1/contact-dispatch</span>
-              <span style="font-size: 0.72rem; color: var(--text-dim);">Accept: application/json</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">Accept: application/json</span>
             </div>
-            <form id="contact-form" class="form-body">
+            
+            <form id="contact-form" class="form-body" action="https://formspree.io/f/mqkvrvla" method="POST" novalidate>
+              <div id="form-error-summary" class="form-error-summary" role="alert" style="display: none;" tabindex="-1"></div>
+
               <div class="form-group">
-                <label for="form-name" class="form-label">Full Name / Organization *</label>
-                <input type="text" id="form-name" class="form-input" placeholder="e.g. Hiring Manager / Tech Recruiter" required>
+                <label for="form-name" class="form-label">Full Name / Organization <span class="required-star" aria-hidden="true">*</span></label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Hiring Manager / Tech Recruiter" required aria-describedby="name-error">
+                <span class="field-error" id="name-error" aria-live="polite"></span>
               </div>
 
               <div class="form-group">
-                <label for="form-email" class="form-label">Your Email Address *</label>
-                <input type="email" id="form-email" class="form-input" placeholder="e.g. engineering-talent@company.com" required>
+                <label for="form-email" class="form-label">Your Email Address <span class="required-star" aria-hidden="true">*</span></label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. engineering-talent@company.com" required aria-describedby="email-error">
+                <span class="field-error" id="email-error" aria-live="polite"></span>
               </div>
 
               <div class="form-group">
                 <label for="form-subject" class="form-label">Subject / Role Opportunity</label>
-                <input type="text" id="form-subject" class="form-input" placeholder="e.g. Junior Backend Engineer Opportunity (Node/Nest)">
+                <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Junior Backend Engineer Opportunity (Node/Nest)">
               </div>
 
               <div class="form-group">
-                <label for="form-message" class="form-label">Message Payload *</label>
-                <textarea id="form-message" class="form-textarea" placeholder="Hello Abdulrahman, we are impressed with your backend engineering portfolio and would like to invite you for an interview..." required></textarea>
+                <label for="form-message" class="form-label">Message Payload <span class="required-star" aria-hidden="true">*</span></label>
+                <textarea id="form-message" name="message" class="form-textarea" placeholder="Hello Abdulrahman, we are impressed with your backend engineering portfolio and would like to invite you for an interview..." required aria-describedby="message-error"></textarea>
+                <span class="field-error" id="message-error" aria-live="polite"></span>
               </div>
 
               <button type="submit" id="form-submit-btn" class="form-submit-btn">
@@ -780,7 +780,7 @@
                 <span>Send Message (POST)</span>
               </button>
 
-              <div id="form-status" class="form-status-msg" role="status"></div>
+              <div id="form-status" class="form-status-msg" role="status" aria-live="polite"></div>
             </form>
           </div>
         </div>
@@ -848,7 +848,7 @@
           <div class="api-sandbox-header">
             <span class="api-sandbox-title">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-              <span id="sandbox-endpoint-label">Endpoint Sandbox</span>
+              <span id="sandbox-endpoint-label">Endpoint Sandbox (Demo / Simulated)</span>
             </span>
             <button class="sandbox-run-btn" id="sandbox-run-btn">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
@@ -857,7 +857,7 @@
           </div>
           <div class="sandbox-res-box" id="sandbox-res-box">
             <div class="sandbox-res-meta">
-              <span>Status: <strong id="sandbox-res-status" style="color: var(--accent-emerald);">HTTP 200 OK</strong></span>
+              <span>Status: <strong id="sandbox-res-status" style="color: var(--accent-emerald);">HTTP 200 OK [Demo / Simulated]</strong></span>
               <span>Latency: <strong id="sandbox-res-latency" style="color: var(--accent-cyan);">14ms</strong></span>
               <span>Server: <span id="sandbox-res-server" style="color: #cbd5e1;">NestJS</span></span>
             </div>
@@ -920,13 +920,13 @@
             <div style="margin-bottom: 0.75rem;">
               <div style="display: flex; justify-content: space-between;">
                 <span class="cv-item-title">Bachelor of Business Information Systems (BIS)</span>
-                <span class="cv-item-sub">Expected Graduation: 2026</span>
+                <span class="cv-item-sub">Graduated 2026</span>
               </div>
               <div class="cv-item-sub">El Motatawera Higher Institute, Haram – Giza</div>
             </div>
             <div>
               <div style="display: flex; justify-content: space-between;">
-                <span class="cv-item-title">Route Academy Backend Node.js Diploma</span>
+                <span class="cv-item-title">Route Academy Backend Node.js Course (Top Achiever)</span>
                 <span class="cv-item-sub" style="color: #059669; font-weight: 600;">Top Achiever</span>
               </div>
               <div class="cv-item-sub">Comprehensive professional specialization in advanced backend architecture, REST API design, security, and databases.</div>
@@ -979,7 +979,7 @@
                 <span class="cv-item-sub">Node.js · MongoDB · Redis · AWS · JWT</span>
               </div>
               <p class="cv-item-desc">
-                Engineered JWT authentication with Two-Factor Verification (2FA) and integrated Redis caching to dramatically reduce database read latency and boost throughput.
+                Engineered JWT authentication with Two-Factor Verification (2FA) and integrated Redis caching to reduce database read latency and boost throughput.
               </p>
             </div>
 
@@ -1033,7 +1033,7 @@
   <div id="toast" class="toast-msg" role="alert"></div>
 
   <!-- Application Scripts -->
-  <script src="js/terminal.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/terminal.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

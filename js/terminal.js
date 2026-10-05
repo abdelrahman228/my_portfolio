@@ -30,7 +30,7 @@
 `,
     bio: () => `
 <div class="terminal-line output-success">❯ Abdulrahman Mohammed Eid</div>
-<div class="terminal-line output-info">Role: Backend Software Engineer | Node.js · TypeScript · NestJS</div>
+<div class="terminal-line output-info">Role: Backend Software Engineer | Node.js · TypeScript · NestJS (Graduated 2026)</div>
 <div class="terminal-line">Experienced in architecting RESTful & GraphQL APIs, MongoDB, JWT/2FA security, Redis caching, and clean modular designs.</div>
 <div class="terminal-line output-amber">★ Route Academy Backend Node.js Top Achiever</div>
 `,
@@ -58,7 +58,7 @@
 `,
     education: () => `
 <div class="terminal-line output-success">❯ Bachelor's Degree in Business Information Systems (BIS)</div>
-<div class="terminal-line output-info">El Motatawera Higher Institute, Haram – Giza (Class of 2026)</div>
+<div class="terminal-line output-info">El Motatawera Higher Institute, Haram – Giza (Graduated 2026)</div>
 <div class="terminal-line">• Focused on database architecture, system analysis, enterprise info systems & software modeling.</div>
 `,
     contact: () => `
@@ -70,7 +70,7 @@
 <div class="terminal-line">Location: Hadayek October, Giza, Egypt</div>
 `,
     status: () => `
-<div class="terminal-line output-success">● HTTP 200 OK - Cluster Healthy</div>
+<div class="terminal-line output-success">● HTTP 200 OK - Cluster Healthy (Demo / Simulated)</div>
 <div class="terminal-line">Runtime:     Node.js v20.18.0 (v8 engine)</div>
 <div class="terminal-line">Framework:   NestJS v10.4.x / Express 4.x</div>
 <div class="terminal-line">Database:    MongoDB Replica Set (Connected)</div>
@@ -144,7 +144,7 @@
 <div class="terminal-line json-block">{
   "engineer": "Abdulrahman Mohammed Eid",
   "title": "Backend Software Engineer",
-  "education": "BIS - El Motatawera Higher Institute (2026)",
+  "education": "BIS - El Motatawera Higher Institute (Graduated 2026)",
   "distinction": "Route Academy Backend Node.js Top Achiever",
   "teaching": "Instructor @ Afaq Academy for Artificial Intelligence"
 }</div>`;

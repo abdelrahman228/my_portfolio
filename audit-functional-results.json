@@ -1,0 +1,627 @@
+{
+  "links": [
+    {
+      "text": "eid@backend:~$",
+      "href": "#hero",
+      "target": null
+    },
+    {
+      "text": "01.//about",
+      "href": "#about",
+      "target": null
+    },
+    {
+      "text": "02.//skills",
+      "href": "#skills",
+      "target": null
+    },
+    {
+      "text": "03.//experience",
+      "href": "#experience",
+      "target": null
+    },
+    {
+      "text": "04.//projects",
+      "href": "#projects",
+      "target": null
+    },
+    {
+      "text": "05.//contact",
+      "href": "#contact",
+      "target": null
+    },
+    {
+      "text": "// 01. About",
+      "href": "#about",
+      "target": null
+    },
+    {
+      "text": "// 02. Skills",
+      "href": "#skills",
+      "target": null
+    },
+    {
+      "text": "// 03. Experience",
+      "href": "#experience",
+      "target": null
+    },
+    {
+      "text": "// 04. Projects",
+      "href": "#projects",
+      "target": null
+    },
+    {
+      "text": "// 05. Contact",
+      "href": "#contact",
+      "target": null
+    },
+    {
+      "text": "GitHub",
+      "href": "https://github.com/abdelrahman228",
+      "target": "_blank"
+    },
+    {
+      "text": "LinkedIn",
+      "href": "https://linkedin.com/in/abdulrahman-mohammed-6015b620b",
+      "target": "_blank"
+    },
+    {
+      "text": "Repository",
+      "href": "https://github.com/abdelrahman228",
+      "target": "_blank"
+    },
+    {
+      "text": "Repository",
+      "href": "https://github.com/abdelrahman228",
+      "target": "_blank"
+    },
+    {
+      "text": "Repository",
+      "href": "https://github.com/abdelrahman228",
+      "target": "_blank"
+    },
+    {
+      "text": "Repository",
+      "href": "https://github.com/abdelrahman228",
+      "target": "_blank"
+    },
+    {
+      "text": "01063887051",
+      "href": "tel:01063887051",
+      "target": null
+    },
+    {
+      "text": "abdelrahman782eid@gmail.com",
+      "href": "mailto:abdelrahman782eid@gmail.com",
+      "target": null
+    },
+    {
+      "text": "github/abdelrahman228",
+      "href": "https://github.com/abdelrahman228",
+      "target": "_blank"
+    },
+    {
+      "text": "LinkedIn Profile",
+      "href": "https://linkedin.com/in/abdulrahman-mohammed-6015b620b",
+      "target": "_blank"
+    },
+    {
+      "text": "^ Back to top",
+      "href": "#hero",
+      "target": null
+    },
+    {
+      "text": "GitHub",
+      "href": "https://github.com/abdelrahman228",
+      "target": "_blank"
+    },
+    {
+      "text": "LinkedIn",
+      "href": "https://linkedin.com/in/abdulrahman-mohammed-6015b620b",
+      "target": "_blank"
+    },
+    {
+      "text": "Open Standalone",
+      "href": "assets/cv/Abdulrahman_Mohammed_Eid_CV.html",
+      "target": "_blank"
+    }
+  ],
+  "buttons": [],
+  "terminal": {
+    "bio": "ed Eid | Role: Backend Software Engineer | Node.js · TypeScript · NestJS | Experienced in architecting RESTful & GraphQL APIs, MongoDB, JWT/2FA security, Redis caching, and clean modular designs. | ★ Route Academy Backend Node.js Top Achiever | eid@server:~$",
+    "skills": "ES2024), SQL | Frameworks: NestJS, Express.js, Node.js | Databases: MongoDB (Mongoose ODM), SQL Server, ERD Design | Security: JWT, 2FA, RBAC Guards & Decorators, DTOs (class-validator) | Cloud/DevOps: Redis Cache, AWS, Cloudinary, Git, Postman | eid@server:~$",
+    "projects": "po, TTL Expiry, Cascading Deletes) | 3. Wshwshny Anonymous Messaging: Node.js, MongoDB, Redis, AWS, 2FA Auth | 4. Black Horse Car Garage: ASP.NET Web Forms, SQL Server, Relational ERD | Tip: Scroll down to inspect interactive project schemas! | eid@server:~$",
+    "curl /api/v1/bio": "hammed Eid\", \"role\": \"Backend Software Engineer\", \"specialties\": [\"Node.js\", \"TypeScript\", \"NestJS\", \"GraphQL\", \"MongoDB\", \"Redis\"], \"openToRoles\": [\"Junior Backend Engineer\", \"Backend Engineering Intern\"], \"location\": \"Giza, Egypt\" } } | eid@server:~$",
+    "status": "200 OK - Cluster Healthy | Runtime: Node.js v20.18.0 (v8 engine) | Framework: NestJS v10.4.x / Express 4.x | Database: MongoDB Replica Set (Connected) | Cache: Redis 7.2 (PONG - 0.4ms) | Memory: 42.8 MB / 512 MB RSS | Latency: 12ms | Uptime: 99.99% | eid@server:~$",
+    "clear": "eid@server:~$"
+  },
+  "palette": {
+    "openedViaBtn": true,
+    "itemsCount": 14,
+    "closedViaEsc": true
+  },
+  "cvModal": {
+    "isOpen": true,
+    "hasPrint": true,
+    "hasClose": true,
+    "closedViaEsc": false
+  },
+  "projectModals": {
+    "keys": {
+      "ecommerce": {
+        "isOpen": true,
+        "title": "E-Commerce Backend (Product Management System)",
+        "sandboxResult": {
+          "status": "HTTP 201 Created",
+          "latency": "13ms",
+          "server": "NestJS / Node.js v20.18.0"
+        }
+      },
+      "social": {
+        "isOpen": true,
+        "title": "Social Media Backend Engine",
+        "sandboxResult": {
+          "status": "HTTP 200 OK",
+          "latency": "16ms",
+          "server": "GraphQL Server / TypeScript"
+        }
+      },
+      "wshwshny": {
+        "isOpen": true,
+        "title": "Wshwshny (Anonymous Messaging Platform Backend)",
+        "sandboxResult": {
+          "status": "HTTP 200 OK",
+          "latency": "15ms",
+          "server": "Node.js / Redis 7.2 (AWS)"
+        }
+      },
+      "blackhorse": {
+        "isOpen": true,
+        "title": "Black Horse Car Garage Management System",
+        "sandboxResult": {
+          "status": "HTTP 200 OK",
+          "latency": "13ms",
+          "server": "Microsoft SQL Server 2022"
+        }
+      }
+    }
+  },
+  "contactForm": {
+    "emptyValidationToast": ""
+  },
+  "contrastIssues": [],
+  "fontSizesUnder12": [
+    {
+      "selector": "button.term-action-btn",
+      "text": "clear",
+      "fontSize": "11.2px"
+    },
+    {
+      "selector": "span.quick-cmd-label",
+      "text": "Quick Run:",
+      "fontSize": "11.2px"
+    },
+    {
+      "selector": "button.quick-cmd-btn",
+      "text": "bio",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "button.quick-cmd-btn",
+      "text": "skills",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "button.quick-cmd-btn",
+      "text": "projects",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "button.quick-cmd-btn",
+      "text": "curl bio",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "button.quick-cmd-btn",
+      "text": "status",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "button.quick-cmd-btn",
+      "text": "clear",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.endpoint-method.post",
+      "text": "POST",
+      "fontSize": "11.2px"
+    },
+    {
+      "selector": "span.project-category-tag",
+      "text": "REST & Modular",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-category-tag",
+      "text": "NestJS · TypeScript · MongoDB ",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "NestJS",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "TypeScript",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "MongoDB",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Cloudinary",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "JWT",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Guards/Decorators",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "class-validator",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.endpoint-method.graphql",
+      "text": "GQL",
+      "fontSize": "11.2px"
+    },
+    {
+      "selector": "span.project-category-tag",
+      "text": "GraphQL & TTL",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-category-tag",
+      "text": "Node.js · TypeScript · MongoDB",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Node.js",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "TypeScript",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "MongoDB",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "GraphQL",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Repository Pattern",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "TTL Expiry",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Cascading Delete",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.endpoint-method.post",
+      "text": "POST",
+      "fontSize": "11.2px"
+    },
+    {
+      "selector": "span.project-category-tag",
+      "text": "Redis & Security",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-category-tag",
+      "text": "Node.js · MongoDB · Redis · AW",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Node.js",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "MongoDB",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Redis",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "AWS",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "JWT",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "2FA Verification",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Rate Limiting",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.endpoint-method.sql",
+      "text": "SQL",
+      "fontSize": "11.2px"
+    },
+    {
+      "selector": "span.project-category-tag",
+      "text": "Relational ERD",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-category-tag",
+      "text": "ASP.NET Web Forms · SQL Server",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "ASP.NET Web Forms",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "SQL Server",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "ERD Modeling",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Stored Procedures",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "Relational DB",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.project-pill",
+      "text": "C#",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span",
+      "text": "Accept: application/json",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "strong",
+      "text": "HTTP 200 OK",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "strong",
+      "text": "13ms",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span",
+      "text": "Microsoft SQL Server 2022",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "ESC to close",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Navigation",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "G A",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Navigation",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "G S",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Navigation",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "G E",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Navigation",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "G P",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Navigation",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "G C",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Projects",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "P 1",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Projects",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "P 2",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Projects",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "P 3",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Projects",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "P 4",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Resume",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "V CV",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Contact",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "C P",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Contact",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "C E",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Links",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "EXT",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "div",
+      "text": "Links",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "span.cmd-kbd",
+      "text": "EXT",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "kbd.cmd-kbd",
+      "text": "↑",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "kbd.cmd-kbd",
+      "text": "↓",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "kbd.cmd-kbd",
+      "text": "ENTER",
+      "fontSize": "11.52px"
+    },
+    {
+      "selector": "kbd.cmd-kbd",
+      "text": "CTRL+K",
+      "fontSize": "11.52px"
+    }
+  ],
+  "mobileOverflow": {
+    "360": {
+      "scrollWidth": 455,
+      "innerWidth": 360,
+      "diff": 95
+    },
+    "390": {
+      "scrollWidth": 455,
+      "innerWidth": 390,
+      "diff": 65
+    }
+  }
+}

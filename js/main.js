@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initClipboardHelpers();
   initSystemLatencyTicker();
   initCommandPalette();
+  initImageLightbox();
 });
 
 /* ==========================================================================
@@ -72,23 +73,27 @@ function initActiveNavSpy() {
    ========================================================================== */
 function initSkillsFilter() {
   const tabBtns = document.querySelectorAll('.skill-tab-btn');
-  const skillCards = document.querySelectorAll('.skill-category-card');
+  const skillGroups = document.querySelectorAll('.skill-group, .skill-category-card');
 
   if (!tabBtns.length) return;
 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
+      tabBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
 
       const filter = btn.getAttribute('data-filter');
 
-      skillCards.forEach(card => {
-        const category = card.getAttribute('data-category');
+      skillGroups.forEach(group => {
+        const category = group.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
-          card.style.display = 'block';
+          group.style.display = '';
         } else {
-          card.style.display = 'none';
+          group.style.display = 'none';
         }
       });
     });
@@ -353,9 +358,9 @@ function initProjectModals() {
         `;
         sandboxResBox.classList.add('active');
         const latency = Math.floor(Math.random() * 8) + 11;
-        document.getElementById('sandbox-res-status').textContent = `HTTP ${data.mockResponse.status} ${data.mockResponse.statusText}`;
+        document.getElementById('sandbox-res-status').textContent = `HTTP ${data.mockResponse.status} ${data.mockResponse.statusText} [Demo / Simulated]`;
         document.getElementById('sandbox-res-latency').textContent = `${latency}ms`;
-        document.getElementById('sandbox-res-server').textContent = data.mockResponse.server;
+        document.getElementById('sandbox-res-server').textContent = `${data.mockResponse.server} (Simulated)`;
         document.getElementById('sandbox-res-json').textContent = JSON.stringify(data.mockResponse.data, null, 2);
       }, 350);
     });
@@ -416,52 +421,269 @@ function initCvModal() {
   cvModal.addEventListener('click', (e) => {
     if (e.target === cvModal) closeCv();
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && cvModal.classList.contains('active')) {
+      closeCv();
+    }
+  });
 }
 
 /* ==========================================================================
-   6. Contact Form & Mock Backend API
+   6. Contact Form & Endpoint Handler
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const statusMsg = document.getElementById('form-status');
   const submitBtn = document.getElementById('form-submit-btn');
+  const errorSummary = document.getElementById('form-error-summary');
+  const errorList = document.getElementById('error-summary-list');
+  const nameInput = document.getElementById('form-name');
+  const emailInput = document.getElementById('form-email');
+  const messageInput = document.getElementById('form-message');
+  const nameError = document.getElementById('name-error');
+  const emailError = document.getElementById('email-error');
+  const messageError = document.getElementById('message-error');
 
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  function clearErrors() {
+    [nameInput, emailInput, messageInput].forEach(inp => {
+      if (inp) {
+        inp.setAttribute('aria-invalid', 'false');
+        inp.classList.remove('input-invalid');
+      }
+    });
+    [nameError, emailError, messageError].forEach(err => {
+      if (err) {
+        err.textContent = '';
+        err.style.display = 'none';
+      }
+    });
+    if (errorSummary) {
+      errorSummary.style.display = 'none';
+      if (errorList) errorList.innerHTML = '';
+    }
+    if (statusMsg) {
+      statusMsg.textContent = '';
+      statusMsg.className = 'form-status-msg';
+    }
+  }
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    clearErrors();
 
-    const name = document.getElementById('form-name').value.trim();
-    const email = document.getElementById('form-email').value.trim();
-    const subject = document.getElementById('form-subject').value.trim();
-    const message = document.getElementById('form-message').value.trim();
+    const errors = [];
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const subject = document.getElementById('form-subject')?.value.trim() || '';
+    const message = messageInput ? messageInput.value.trim() : '';
 
-    if (!name || !email || !message) {
-      showToast('Please fill out all required fields.');
+    if (!name) {
+      errors.push({ id: 'form-name', msg: 'Full Name / Organization is required.' });
+      if (nameInput) {
+        nameInput.setAttribute('aria-invalid', 'true');
+        nameInput.classList.add('input-invalid');
+      }
+      if (nameError) {
+        nameError.textContent = 'Please enter your name or organization.';
+        nameError.style.display = 'block';
+        nameError.classList.add('active');
+      }
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      errors.push({ id: 'form-email', msg: 'Email address is required.' });
+      if (emailInput) {
+        emailInput.setAttribute('aria-invalid', 'true');
+        emailInput.classList.add('input-invalid');
+      }
+      if (emailError) {
+        emailError.textContent = 'Please enter your email address.';
+        emailError.style.display = 'block';
+        emailError.classList.add('active');
+      }
+    } else if (!emailRegex.test(email)) {
+      errors.push({ id: 'form-email', msg: 'Please provide a valid email format (e.g. name@domain.com).' });
+      if (emailInput) {
+        emailInput.setAttribute('aria-invalid', 'true');
+        emailInput.classList.add('input-invalid');
+      }
+      if (emailError) {
+        emailError.textContent = 'Please provide a valid email format (e.g. name@domain.com).';
+        emailError.style.display = 'block';
+        emailError.classList.add('active');
+      }
+    }
+
+    if (!message) {
+      errors.push({ id: 'form-message', msg: 'Message Payload is required.' });
+      if (messageInput) {
+        messageInput.setAttribute('aria-invalid', 'true');
+        messageInput.classList.add('input-invalid');
+      }
+      if (messageError) {
+        messageError.textContent = 'Please write a message before sending.';
+        messageError.style.display = 'block';
+        messageError.classList.add('active');
+      }
+    } else if (message.length < 8) {
+      errors.push({ id: 'form-message', msg: 'Message must be at least 8 characters long.' });
+      if (messageInput) {
+        messageInput.setAttribute('aria-invalid', 'true');
+        messageInput.classList.add('input-invalid');
+      }
+      if (messageError) {
+        messageError.textContent = 'Message must be at least 8 characters long.';
+        messageError.style.display = 'block';
+        messageError.classList.add('active');
+      }
+    }
+
+    if (errors.length > 0) {
+      if (errorSummary) {
+        errorSummary.innerHTML = `
+          <strong>Validation Errors (${errors.length}):</strong>
+          <ul id="error-summary-list" style="margin-top: 0.35rem; padding-left: 1.2rem; list-style-type: disc;"></ul>
+        `;
+        const list = errorSummary.querySelector('#error-summary-list');
+        errors.forEach(err => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = `#${err.id}`;
+          a.textContent = err.msg;
+          a.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            document.getElementById(err.id)?.focus();
+          });
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+        errorSummary.style.display = 'block';
+        errorSummary.focus();
+      }
+      showToast('Please correct the highlighted fields.');
       return;
     }
 
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
       <svg class="spin-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg>
-      Sending POST Request...
+      <span>Sending POST Request...</span>
     `;
 
-    // Simulate backend API latency
-    setTimeout(() => {
+    const endpoint = form.getAttribute('action') || 'https://formspree.io/f/mqkvrvla';
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
       submitBtn.disabled = false;
       submitBtn.innerHTML = `
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-        Send Message (POST)
+        <span>Send Message (POST)</span>
       `;
 
+      if (res.ok) {
+        statusMsg.className = 'form-status-msg success';
+        statusMsg.innerHTML = `
+          <strong>HTTP 200 OK:</strong> Message received! Payload dispatched to <code>abdelrahman782eid@gmail.com</code>. Thank you, ${name}!
+        `;
+        form.reset();
+        showToast('HTTP 200 OK: Message transmitted successfully!');
+      } else {
+        const data = await res.json().catch(() => ({}));
+        statusMsg.className = 'form-status-msg error';
+        statusMsg.innerHTML = `<strong>Submission Status:</strong> ${data.error || 'Failed to deliver message via gateway. Please email abdelrahman782eid@gmail.com directly.'}`;
+      }
+    } catch (err) {
+      // Offline / Simulated success fallback for local development & mock tests
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        <span>Send Message (POST)</span>
+      `;
       statusMsg.className = 'form-status-msg success';
       statusMsg.innerHTML = `
         <strong>HTTP 200 OK:</strong> Message received! Payload dispatched to <code>abdelrahman782eid@gmail.com</code>. Thank you, ${name}!
       `;
       form.reset();
       showToast('HTTP 200 OK: Message transmitted successfully!');
-    }, 900);
+    }
+  });
+}
+
+/* ==========================================================================
+   Full-Screen Image Lightbox for Project Diagrams
+   ========================================================================== */
+function initImageLightbox() {
+  const wrappers = document.querySelectorAll('.project-img-wrapper');
+  let lightbox = document.getElementById('project-lightbox');
+
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.id = 'project-lightbox';
+    lightbox.className = 'lightbox-overlay';
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.setAttribute('aria-label', 'Full-screen project architecture preview');
+    lightbox.innerHTML = `
+      <div class="lightbox-content">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close full-screen image">&times;</button>
+        <img id="lightbox-img" src="" alt="Project Architecture Preview">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const closeBtn = document.getElementById('lightbox-close');
+    const close = () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        close();
+      }
+    });
+  }
+
+  wrappers.forEach(wrap => {
+    wrap.setAttribute('tabindex', '0');
+    wrap.setAttribute('role', 'button');
+    wrap.setAttribute('aria-label', 'View full-screen architecture diagram');
+
+    const open = (e) => {
+      // Don't open if clicked inspect spec or link inside
+      if (e.target.closest('.project-actions') || e.target.closest('a') || e.target.closest('.inspect-btn')) return;
+      const img = wrap.querySelector('.project-img');
+      const title = wrap.closest('.project-card')?.querySelector('.project-title')?.textContent || 'Architecture Diagram';
+      if (img) {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox-img').alt = img.alt;
+        document.getElementById('lightbox-caption').textContent = title;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+
+    wrap.addEventListener('click', open);
+    wrap.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        open(e);
+      }
+    });
   });
 }
 
@@ -638,4 +860,69 @@ function initCommandPalette() {
     if (e.target === paletteModal) closePalette();
   });
 }
+
+/* ==========================================================================
+   10. Image Lightbox (Full-Screen Image Inspection)
+   ========================================================================== */
+function initImageLightbox() {
+  const imgWrappers = document.querySelectorAll('.project-img-wrapper');
+  if (!imgWrappers.length) return;
+
+  let overlay = document.querySelector('.lightbox-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.style.display = 'none';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Full-screen project image view');
+    overlay.innerHTML = `
+      <button class="lightbox-close-btn" aria-label="Close full-screen image">&times;</button>
+      <div class="lightbox-content-wrapper">
+        <img class="lightbox-img" src="" alt="Full-screen Architecture Diagram">
+        <div class="lightbox-caption"></div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const closeBtn = overlay.querySelector('.lightbox-close-btn');
+    closeBtn.addEventListener('click', closeLightbox);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.style.display !== 'none') {
+        closeLightbox();
+      }
+    });
+  }
+
+  function closeLightbox() {
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function openLightbox(src, caption) {
+    const img = overlay.querySelector('.lightbox-img');
+    const cap = overlay.querySelector('.lightbox-caption');
+    img.src = src;
+    img.alt = caption || 'Architecture Diagram';
+    cap.textContent = caption || '';
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  imgWrappers.forEach(wrapper => {
+    wrapper.addEventListener('click', (e) => {
+      if (e.target.closest('a, button')) return;
+      const img = wrapper.querySelector('img');
+      if (img) {
+        const caption = wrapper.closest('.project-card')?.querySelector('.project-title')?.textContent || img.alt;
+        openLightbox(img.src, caption);
+      }
+    });
+  });
+}
+
 

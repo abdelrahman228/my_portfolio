@@ -1,0 +1,25 @@
+{
+  "name": "icareer",
+  "version": "1.0.0",
+  "description": "> **Backend Software Engineer** | Node.js · TypeScript · NestJS · MongoDB · Redis   > Personal portfolio website engineered with a terminal-inspired, modern tech dark aesthetic.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdelrahman228/my_portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/abdelrahman228/my_portfolio/issues"
+  },
+  "homepage": "https://github.com/abdelrahman228/my_portfolio#readme",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
