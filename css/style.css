@@ -214,10 +214,7 @@ ul {
   position: relative;
 }
 
-.nav-link .nav-num {
-  color: var(--primary);
-  margin-right: 0.25rem;
-}
+
 
 .nav-link:hover, .nav-link.active {
   color: var(--text);
@@ -1838,9 +1835,7 @@ section {
 }
 
 @media (max-width: 1280px) {
-  .nav-link .nav-num {
-    display: none;
-  }
+
   .nav-links {
     gap: 0.5rem;
   }
